@@ -12,7 +12,10 @@
 
     <modules>
         <module>cdsic-front</module>
+        <!-- 逆向工程 -->
         <module>renren-fast</module>
+        <!-- 代码生成器 -->
+        <module>renren-generator</module>
     </modules>
 
 </project>
