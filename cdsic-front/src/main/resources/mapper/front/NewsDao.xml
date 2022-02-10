@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cdsic.front.dao.NewsDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.cdsic.front.entity.NewsEntity" id="newsMap">
+        <result property="nid" column="nid"/>
+        <result property="ndate" column="ndate"/>
+        <result property="ntitle" column="ntitle"/>
+        <result property="ncontent" column="ncontent"/>
+        <result property="nsynopsis" column="nsynopsis"/>
+    </resultMap>
+
+
+</mapper>
