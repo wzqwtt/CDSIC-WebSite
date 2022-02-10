@@ -3,7 +3,6 @@ package com.cdsic.front.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +34,6 @@ public class ProjectController {
      * 列表
      */
     @RequestMapping("/list")
-    @RequiresPermissions("front:project:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = projectService.queryPage(params);
 
@@ -47,7 +45,6 @@ public class ProjectController {
      * 信息
      */
     @RequestMapping("/info/{pid}")
-    @RequiresPermissions("front:project:info")
     public R info(@PathVariable("pid") Integer pid){
 		ProjectEntity project = projectService.getById(pid);
 
@@ -58,7 +55,6 @@ public class ProjectController {
      * 保存
      */
     @RequestMapping("/save")
-    @RequiresPermissions("front:project:save")
     public R save(@RequestBody ProjectEntity project){
 		projectService.save(project);
 
@@ -69,7 +65,6 @@ public class ProjectController {
      * 修改
      */
     @RequestMapping("/update")
-    @RequiresPermissions("front:project:update")
     public R update(@RequestBody ProjectEntity project){
 		projectService.updateById(project);
 
@@ -80,7 +75,6 @@ public class ProjectController {
      * 删除
      */
     @RequestMapping("/delete")
-    @RequiresPermissions("front:project:delete")
     public R delete(@RequestBody Integer[] pids){
 		projectService.removeByIds(Arrays.asList(pids));
 

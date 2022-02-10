@@ -19,6 +19,12 @@
     </properties>
     <dependencies>
         <dependency>
+            <!-- 每一个微服务公共的依赖（bean，utils）都放在这里 -->
+            <groupId>com.cdsic</groupId>
+            <artifactId>cdsic-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>

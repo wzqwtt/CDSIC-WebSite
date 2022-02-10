@@ -3,7 +3,6 @@ package com.cdsic.front.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +34,6 @@ public class NewsController {
      * 列表
      */
     @RequestMapping("/list")
-    @RequiresPermissions("front:news:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = newsService.queryPage(params);
 
@@ -47,7 +45,6 @@ public class NewsController {
      * 信息
      */
     @RequestMapping("/info/{nid}")
-    @RequiresPermissions("front:news:info")
     public R info(@PathVariable("nid") Integer nid){
 		NewsEntity news = newsService.getById(nid);
 
@@ -58,7 +55,6 @@ public class NewsController {
      * 保存
      */
     @RequestMapping("/save")
-    @RequiresPermissions("front:news:save")
     public R save(@RequestBody NewsEntity news){
 		newsService.save(news);
 
@@ -69,7 +65,6 @@ public class NewsController {
      * 修改
      */
     @RequestMapping("/update")
-    @RequiresPermissions("front:news:update")
     public R update(@RequestBody NewsEntity news){
 		newsService.updateById(news);
 
@@ -80,7 +75,6 @@ public class NewsController {
      * 删除
      */
     @RequestMapping("/delete")
-    @RequiresPermissions("front:news:delete")
     public R delete(@RequestBody Integer[] nids){
 		newsService.removeByIds(Arrays.asList(nids));
 
