@@ -5,10 +5,19 @@ spring:
         server-addr: 127.0.0.1:8848
     gateway:
       routes:
-        - id: test_route
-          uri: https://www.baidu.com
+        - id: front_route
+          uri: lb://cdsic-front
           predicates:
-            - Query=url,baidu
+            - Path=/api/front/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+
+        - id: admin_route
+          uri: lb://renren-fast
+          predicates:
+            - Path=/api/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/renren-fast/$\{segment}
   application:
     name: cdsic-gateway
 server:
