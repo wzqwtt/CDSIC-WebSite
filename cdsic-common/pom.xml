@@ -18,6 +18,15 @@
     </properties>
 
     <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-alicloud-oss -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alicloud-oss</artifactId>
+            <version>2.2.0.RELEASE</version>
+        </dependency>
+
+
         <!-- mybatis-plus -->
         <dependency>
             <groupId>com.baomidou</groupId>
