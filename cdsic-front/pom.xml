@@ -18,6 +18,13 @@
         <spring-cloud.version>2020.0.5</spring-cloud.version>
     </properties>
     <dependencies>
+
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>3.10.2</version>
+        </dependency>
+
         <dependency>
             <!-- 每一个微服务公共的依赖（bean，utils）都放在这里 -->
             <groupId>com.cdsic</groupId>
