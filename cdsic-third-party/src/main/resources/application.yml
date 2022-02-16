@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    alicloud:
+      access-key: LTAI5tNvdFCqT6NuZsf3X8eD
+      secret-key: NveJPuhuYXvOQyIPJyVlowOqxRZZwz
+      oss:
+        endpoint: oss-cn-hangzhou.aliyuncs.com
+        bucket: cdsic
+
+  application:
+    name: cdsic-third-party
+
+server:
+  port: 9001

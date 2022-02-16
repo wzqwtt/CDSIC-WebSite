@@ -20,6 +20,8 @@
         <module>cdsic-common</module>
         <!-- gateway网关 -->
         <module>cdsic-gateway</module>
+        <!-- 第三方服务 -->
+        <module>cdsic-third-party</module>
     </modules>
 
 </project>
