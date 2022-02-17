@@ -22,7 +22,9 @@ public class NewsServiceImpl extends ServiceImpl<NewsDao, NewsEntity> implements
                 new Query<NewsEntity>().getPage(params),
                 new QueryWrapper<NewsEntity>()
         );
-
+//        for (NewsEntity record : page.getRecords()) {
+//            System.out.println(record.getNdate());
+//        }
         return new PageUtils(page);
     }
 
