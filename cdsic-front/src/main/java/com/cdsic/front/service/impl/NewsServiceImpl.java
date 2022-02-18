@@ -1,7 +1,10 @@
 package com.cdsic.front.service.impl;
 
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Map;
+
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -22,10 +25,14 @@ public class NewsServiceImpl extends ServiceImpl<NewsDao, NewsEntity> implements
                 new Query<NewsEntity>().getPage(params),
                 new QueryWrapper<NewsEntity>()
         );
-//        for (NewsEntity record : page.getRecords()) {
-//            System.out.println(record.getNdate());
-//        }
+
         return new PageUtils(page);
+    }
+
+    @Override
+    public List<NewsEntity> getRecentNews() {
+        List<NewsEntity> newsEntityList = baseMapper.selectList(new QueryWrapper<NewsEntity>().orderByDesc("ndate").last("limit 5"));
+        return newsEntityList;
     }
 
 }

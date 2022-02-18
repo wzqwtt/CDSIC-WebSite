@@ -1,7 +1,10 @@
 package com.cdsic.front.service.impl;
 
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Map;
+
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -24,6 +27,12 @@ public class ProjectServiceImpl extends ServiceImpl<ProjectDao, ProjectEntity> i
         );
 
         return new PageUtils(page);
+    }
+
+    @Override
+    public List<ProjectEntity> getCarouselProject() {
+        List<ProjectEntity> projectEntities = baseMapper.selectList(new QueryWrapper<ProjectEntity>().eq("pisCarousel", 1).orderByDesc("porder"));
+        return projectEntities;
     }
 
 }

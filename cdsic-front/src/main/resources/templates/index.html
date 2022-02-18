@@ -2,1569 +2,1140 @@
 <html lang="zxx" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>首页</title>
-	<!-- Meta tag Keywords -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8" />
-	<meta name="keywords" content="" />
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
+    <title>首页</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8"/>
+    <meta name="keywords" content=""/>
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
 
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
-	<!-- //Meta tag Keywords -->
-	<!-- <link rel="icon" href="images/logo/logo.png" type="image"/> -->
-	<!-- Custom-Files -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Bootstrap-Core-CSS -->
-	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- pop up box -->
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-	<!-- Style-CSS -->
-	<link rel="stylesheet" href="css/fontawesome-all.css">
-	<!-- Font-Awesome-Icons-CSS -->
-	<!-- //Custom-Files -->
-	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- <link rel="icon" href="images/logo/logo.png" type="image"/> -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="/static/front/css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link href="/static/front/css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- pop up box -->
+    <link rel="stylesheet" href="/static/front/css/style.css" type="text/css" media="all"/>
+    <!-- Style-CSS -->
+    <link rel="stylesheet" href="/static/front/css/fontawesome-all.css">
+    <!-- Font-Awesome-Icons-CSS -->
+    <!-- //Custom-Files -->
+    <link rel="stylesheet" href="/static/front/css/swiper-bundle.min.css">
 
 
-	<!-- Web-Fonts -->
-	<link
-		href="http://fonts.googleapis.com/css?family=Exo:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese"
-		rel="stylesheet">
-	<link
-		href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-		rel="stylesheet">
-	<!-- //Web-Fonts -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Web-Fonts -->
+    <link
+            href="http://fonts.googleapis.com/css?family=Exo:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese"
+            rel="stylesheet">
+    <link
+            href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+            rel="stylesheet">
+    <!-- //Web-Fonts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 
 <body>
-	<div class="w3l-hear-top">
-		<!-- header -->
-		<header>
-			<!-- logo -->
-			<div class="logo">
-				<h1>
-					<a href="index.html" class="text-center text-white" style="margin-left: 1400px;">
-						<!-- <i class="far fa-paper-plane pr-2"></i> -->
-						<img src="images/logo/logo1.png" style="width: 20%;height: auto;" alt="">
-						<!-- <span>CDSIC-NJAU</span> -->
-					</a>
-					<!--<img src="images/CDSIC_画板 1.png" />-->
-				</h1>
-			</div>
-			<!-- //logo -->
-			<!-- search -->
-			<div class="w3ls_search">
-				<div class="cd-main-header">
-					<ul class="cd-header-buttons">
-						<li>
-							<a class="cd-search-trigger" href="#cd-search">
-								<span></span>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div id="cd-search" class="cd-search">
-					<form action="#" method="post">
-						<input name="Search" type="search" placeholder="Click enter after typing...">
-					</form>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-			<!-- //search -->
+<div class="w3l-hear-top">
+    <!-- header -->
+    <header>
+        <!-- logo -->
+        <div class="logo">
+            <h1>
+                <a href="index.html" class="text-center text-white" style="margin-left: 1400px;">
+                    <!-- <i class="far fa-paper-plane pr-2"></i> -->
+                    <img src="/static/front/images/logo/logo1.png" style="width: 20%;height: auto;" alt="">
+                    <!-- <span>CDSIC-NJAU</span> -->
+                </a>
+                <!--<img src="images/CDSIC_画板 1.png" />-->
+            </h1>
+        </div>
+        <!-- //logo -->
+        <!-- search -->
+        <div class="w3ls_search">
+            <div class="cd-main-header">
+                <ul class="cd-header-buttons">
+                    <li>
+                        <a class="cd-search-trigger" href="#cd-search">
+                            <span></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="cd-search" class="cd-search">
+                <form action="#" method="post">
+                    <input name="Search" type="search" placeholder="Click enter after typing...">
+                </form>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <!-- //search -->
 
-			<!-- menu -->
-			<div class="side_menu">
-				<div class="burger_box">
-					<div class="menu-icon-container">
-						<a href="#" class="menu-icon js-menu_toggle closed">
+        <!-- menu -->
+        <div class="side_menu">
+            <div class="burger_box">
+                <div class="menu-icon-container">
+                    <a href="#" class="menu-icon js-menu_toggle closed">
 							<span class="menu-icon_box">
 								<span class="menu-icon_line menu-icon_line--1"></span>
 								<span class="menu-icon_line menu-icon_line--2"></span>
 								<span class="menu-icon_line menu-icon_line--3"></span>
 							</span>
-						</a>
-					</div>
-				</div>
-				<div class="container">
-					<h3 class="menu_title my-4">Menu</h3>
-					<ul class="list_load">
-						<!-- <li class="list_item">
-							<a href="all.html">All Pages</a>
-						</li> -->
-						<li class="list_item">
-							<a href="index.html" class="active">首页</a>
-						</li>
-						<li class="list_item">
-							<a href="news.html">团队新闻</a>
-						</li>
-						<li class="list_item">
-							<a href="blog.html">科研成果</a>
-						</li>
-						<li class="list_item">
-							<a href="filed.html">研究方向</a>
-						</li>
-						<li class="list_item">
-							<a class="onclick_demo" href="#">客座教授</a>
-						</li>
-						<li class="list_item">
-							<a class="onclick_demo" href="#">联系我们</a>
-						</li>
-						<!-- <li class="list_item">
-							<a class="onclick_demo" href="#">404 Error Page</a>
-						</li>
-						<li class="list_item">
-							<a class="onclick_demo" href="#">Blog</a>
-						</li>
-						<li class="list_item">
-							<a class="onclick_demo" href="#">Single Page</a>
-						</li>
-						<li class="list_item">
-							<a class="onclick_demo" href="#">Contact Us</a>
-						</li> -->
-						<script>
-							// $(".onclick_demo").onclick(function(){
-
-							// 	console.log("1");
-							// 	alert("该页面正在开发中,目前不开放!");
-
-							// });
-
-							$(".onclick_demo").bind("click", function () {
-								console.log("1");
-								alert("该页面正在开发中,目前暂不开放!");
-							})
-
-						</script>
-					</ul>
-				</div>
-			</div>
-			<!-- //menu -->
-		</header>
-		<!-- //header -->
-		<!-- banner-slider -->
-		<div class="w3l_banner_info" id="home">
-			<div class="slider">
-				<div class="callbacks_container">
-					<ul class="rslides" id="slider3">
-						<li>
-
-							<style>
-								.a1 {
-									background: url(images/news/index.png) no-repeat 0px 0px;
-								}
-
-								.a2 {
-									background: url(images/news/index2.png) no-repeat 0px 0px;
-								}
-
-								.a3 {
-									background: url(images/a3.jpg) no-repeat 0px 0px;
-								}
-
-								.a4 {
-									background: url(images/a4.jfif) no-repeat 0px 0px;
-								}
-
-								.a1,
-								.a2,
-								.a3,
-								.a4 {
-									background-size: cover;
-									-webkit-background-size: cover;
-									-moz-background-size: cover;
-									-o-background-size: cover;
-									-ms-background-size: cover;
-									min-height: 550px;
-								}
-							</style>
-
-							<div class="slider-img a3">
-								<div class="container">
-									<div class="slider_banner_info ml-md-5 pl-md-5">
-										<!-- <h4 class="text-uppercase font-weight-light text-white">
-											Test
-											<span>Test Test</span> Test
-										</h4> -->
-										<!-- <a href="about.html" class="w3ls-button border text-white mt-md-5 mt-4">Read
-											More</a> -->
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="slider-img a1">
-								<div class="container">
-									<div class="slider_banner_info ml-md-5 pl-md-5">
-										<!-- <h4 class="text-uppercase font-weight-light text-white">Test
-											<span>Test Test</span> Test
-										</h4> -->
-										<!--
-										<a href="about.html" class="w3ls-button border text-white mt-md-5 mt-4">Read
-											More</a>-->
-									</div>
-								</div>
-							</div>
-						</li>
-						<!-- <li>
-							<div class="slider-img a4">
-								<div class="container">
-									<div class="slider_banner_info ml-md-5 pl-md-5">
-										<h4 class="text-uppercase font-weight-light text-white">Best
-											<span>Apartments</span> to Rent
-										</h4>
-									
-									</div>
-								</div>
-							</div>
-						</li> -->
-						<!-- 
-						<li>
-							<div class="slider-img a4">
-								<div class="container">
-									<div class="slider_banner_info ml-md-5 pl-md-5">
-										<h4 class="text-uppercase font-weight-light text-white">Get
-											<span>Started Right</span> Now
-										</h4>
-										<a href="about.html" class="w3ls-button border text-white mt-md-5 mt-4">Read
-											More</a>
-									</div>
-								</div>
-							</div>
-						</li> -->
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!-- banner-slider -->
-	</div>
-
-
-	<!-- video -->
-	<!--
-	<div class="video-w3l">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-6 col-sm-8 left-build-wthree py-5 px-md-5 px-4">
-					<div class="py-xl-5 py-lg-3">
-						<h4>A Beautiful beach house</h4>
-						<p class="my-4">Enjoy a refreshing time on your own east coast that will host the most luxurious
-							holiday for you and your family!</p>
-						<ul>
-							<li class="pt-5 mt-3 border-top">
-								<i class="fas fa-bed pr-2"></i>
-								Beadrooms - 7
-							</li>
-							<li class="mt-3">
-								<i class="fas fa-bath pr-2"></i>
-								Bathrooms - 4
-							</li>
-							<li class="mt-3">
-								<i class="fas fa-warehouse pr-2"></i>
-								Garages - 1
-							</li>
-							<li class="mt-3">
-								<i class="fas fa-car pr-2"></i>
-								Parking places - 3
-							</li>
-							<li class="mt-3">
-								<i class="fas fa-chart-area pr-2"></i>
-								Area - 1500.00 m²
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-6 col-sm-4 button text-center">
-					<a href="#small-dialog1" class="play-icon popup-with-zoom-anim" title="Play Video">
-						<i class="far fa-play-circle"></i>
-					</a>
-				</div>
-				<div id="small-dialog1" class="mfp-hide">
-					<div class="agileits_modal_body">
-						<iframe src=""></iframe>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
--->
-	<!-- //video -->
-
-
-	<!-- 最新动态 -->
-	<div class="project-sec py-5">
-		<div class="container py-xl-5 py-lg-3">
-			<div class="title text-center mb-sm-5 mb-4">
-				<h3>科研动态</h3>
-				<!-- <p>sed quia non numquam eius modi tempora</p> -->
-			</div>
-			<div class="row">
-				<div class="col-lg-4 col-md-5 project-left">
-					<div>
-						<!-- <img src="images/project1.jpg" alt="" class="img-fluid">
-						<div class="bottom-w3ls-agile p-4">
-							<h4 class="text-dark mb-3">测试标题2</h4>
-							<p class="text-white">test test test test test test test test test test test test test test
-							</p>
-						</div> -->
-
-						<style>
-							.mt-3 {
-								margin-top: 2.22rem !important;
-							}
-
-							.blog-title {
-								color: #FFC107;
-								text-shadow: 1px 1px 1px rgba(233, 233, 233, 0.27);
-							}
-						</style>
-						<!-- 团队新闻 -->
-						<div class="categories p-4 border" style="margin-top: 0.55rem;">
-							<a href="news.html">
-								<h3 class="blog-title">&nbsp;团队新闻</h3>
-							</a>
-							<ul>
-								<li class="mt-3">
-									<!-- <i class="fas fa-angle-right" style="font-size: 20px;"></i>&nbsp; -->
-									<a href="news3.html" style="font-size: 16px;">高欣教授为课题组做作线上报告</a>
-									<span style="float: right;">12-15</span>
-								</li>
-								<li class="mt-3">
-									<!-- <i class="fas fa-angle-right" style="font-size: 20px;"></i>&nbsp; -->
-									<a href="news2.html" style="font-size: 16px;">课题组参加第十一届江苏省生物...</a>
-									<span style="float: right;">12-05</span>
-								</li>
-								<li class="mt-3">
-									<!-- <i class="fas fa-angle-right" style="font-size: 20px;"></i>&nbsp; -->
-									<a href="news1.html" style="font-size: 16px;">李明辉教授为课题组作报告</a>
-									<span style="float: right;">12-04</span>
-								</li>
-								
-						
-								<li class="mt-3">
-									<!-- <i class="fas fa-angle-right" style="font-size: 20px;"></i>&nbsp; -->
-									<a href="#" style="font-size: 16px;">校领导到研工部、研究生院调研</a>
-									<span style="float: right;">11-24</span>
-								</li>
-								<li class="mt-3">
-									<!-- <i class="fas fa-angle-right" style="font-size: 20px;"></i>&nbsp; -->
-									<a href="#" style="font-size: 16px;">学校举行政协委员进企业暨党派团...</a>
-									<span style="float: right;">11-23</span>
-								</li>
-
-								<!-- <li class="mt-3">
-									<i class="fas fa-check mr-2"></i>
-									<a href="single.html">Neque porro quisquam est qui</a>
-								</li> -->
-							</ul>
-						</div>
-					</div>
-
-					<!-- 上传简历 -->
-					<div class="d-flex sec-proj-wthree mt-4">
-						<div class="col-7 img-left-projw3 pr-0 p-0">
-							<img src="images/join.png" alt="" class="img-fluid">
-						</div>
-
-						<div class="col-5 bottom-w3ls-agile2 pl-0 p-0">
-							<a href="mailto:Zhiwei.Ji@njau.edu.cn">
-								<h4 class=" border py-xl-5 px-3" style="color: blue;">Upload Resume</h4>
-							</a>
-						</div>
-
-					</div>
-				</div>
-
-				<div class="col-lg-8 col-md-7 project-right mt-md-0 mt-5">
-					<style>
-						.Figure1,
-						.Figure2 {
-							min-height: 408px;
-						}
-
-
-
-						.Figure1 {
-							background: url(./images/news/Figure1.jpg) no-repeat center;
-							background-size: cover;
-							-webkit-background-size: cover;
-							-moz-background-size: cover;
-							-o-background-size: cover;
-							-ms-background-size: cover;
-						}
-
-						.Figure2 {
-							background: url(./images/news/Figure2.jpg) no-repeat center;
-							background-size: cover;
-							-webkit-background-size: cover;
-							-moz-background-size: cover;
-							-o-background-size: cover;
-							-ms-background-size: cover;
-						}
-					</style>
-
-
-					<div class="swiper mySwiper">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-
-								<a href="single.html">
-
-									<div class="carousel-inner">
-										<div class="Figure1"></div>
-									</div>
-									<div class="bottom-w3ls-agile p-4">
-										<h4 class="text-dark mb-3">最新动态</h4>
-										<p class="text-white" style="font-size: 17px;">
-											计智伟教授团队利用系统生物学方法揭示阿尔兹海默病中TREM2调控机制的时序特性
-											<br><br>
-										</p>
-									</div>
-								</a>
-
-
-							</div>
-							<div class="swiper-slide">
-								<a href="single1.html">
-									<div class="carousel-inner">
-										<div class="Figure2"></div>
-									</div>
-									<div class="bottom-w3ls-agile p-4">
-										<h4 class="text-dark mb-3">最新动态</h4>
-										<p class="text-white" style="font-size: 17px;">夏菲等在Frontiers in Plant
-											Science上发表论文，提出了一种深度聚类算法用于植物病害诊断识别。
-											<br>
-										</p>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-pagination" style="color:aliceblue;"></div>
-
-
-
-				</div>
-
-
-			</div>
-			<div class="text-center blog-button">
-				<a href="blog.html" class="w3ls-button2 text-white mt-md-5 mt-4">查&nbsp;看&nbsp;更&nbsp;多</a>
-			</div>
-		</div>
-
-		<!-- <div class="container py-xl-5 py-lg-3"> -->
-		<!-- <div class="container">
-			<div class="row news-grids">
-				<div class="col-md-6 news-wthreegrid">
-					<div class="date-info w3ls-colo-head p-sm-5 p-4">
-						<h6>2021年9月20日</h6>
-						<a href="#" class="my-3">测试标题1</a>
-						<p>test test test test test test test test test test test test test test test test test test
-							test test test test test test test test test test test test </p>
-					</div>
-				</div>
-				<div class="col-md-6 news-wthreegrid px-md-0 mt-md-0 mt-5">
-					<div class="date-info w3ls-colo-head-2 p-sm-5 p-4">
-						<h6>2021年9月20日</h6>
-						<a href="#" class="my-3">测试标题2</a>
-						<p>test test test test test test test test test test test test test test test test test test
-							test test test test test test test test test test test test </p>
-					</div>
-				</div>
-			</div>
-			<div class="text-center blog-button">
-				<a href="#" class="w3ls-button2 text-white mt-md-5 mt-4 onclick_demo1">Full View</a>
-
-			</div>
-		</div> -->
-		<!-- </div> -->
-
-	</div>
-	<!-- //projects -->
-
-	<!-- blog -->
-
-	<!-- <div class="project-sec py-5">
-
-	</div> -->
-	<!-- //blog -->
-
-
-	<!-- Stats-->
-	<!-- 	
-	<div class="stats-w3layouts py-5">
-		<div class="container py-xl-5 py-lg-3">
-			<div class="stats-info">
-				<div class="row">
-					<div class="col-md-3 col-6 stats-grid-w3-agile text-center border-right">
-						<i class="fas fa-home text-white rounded-circle"></i>
-						<div class='numscroller font-weight-bold my-2' data-slno='1' data-min='0' data-max='1280'
-							data-delay='.5' data-increment="1">1280</div>
-						<p class="text-capitalize text-white">complete project</p>
-					</div>
-					<div class="col-md-3 col-6 stats-grid-w3-agile text-center border-right">
-						<i class="fas fa-trophy text-white rounded-circle"></i>
-						<div class='numscroller font-weight-bold my-2' data-slno='1' data-min='0' data-max='920'
-							data-delay='.5' data-increment="1">920</div>
-						<p class="text-capitalize text-white">awards win</p>
-					</div>
-					<div class="col-md-3 col-6 stats-grid-w3-agile text-center border-right mt-md-0 mt-5">
-						<i class="fas fa-key text-white rounded-circle"></i>
-						<div class='numscroller font-weight-bold my-2' data-slno='1' data-min='0' data-max='1200'
-							data-delay='.5' data-increment="1">1200</div>
-						<p class="text-capitalize text-white">property sold</p>
-					</div>
-					<div class="col-md-3 col-6 stats-grid-w3-agile text-center mt-md-0 mt-5">
-						<i class="far fa-smile text-white rounded-circle"></i>
-						<div class='numscroller font-weight-bold my-2' data-slno='1' data-min='0' data-max='1200'
-							data-delay='.5' data-increment="1">1200</div>
-						<p class="text-capitalize text-white">happy clients</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-	<!-- //Stats -->
-
-	<!-- price-->
-	<!--
-	<div class="price-sec py-5">
-		<div class="container py-xl-5 py-lg-3">
-			<div class="title text-center mb-sm-5 mb-4">
-				<h3 class="text-dark font-italic">Pricing</h3>
-				<p>sed quia non numquam eius modi tempora</p>
-			</div>
-			<div class="inner_sec_info_agile_w3_info">
-				<div class="row price-grid-main">
-					<div class="col-lg-3 col-sm-6 price-info">
-						<div class="prices border p-4">
-							<div class="prices-top">
-								<div class="dodecagon s1">
-									<div class="dodecagon-in s1">
-										<div class="dodecagon-bg s1">
-											<h3 class="text-center text-white rounded-circle">$30</h3>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="prices-bottom text-center">
-								<div class="prices-h border-bottom p-4">
-									<h4>Standard</h4>
-								</div>
-								<ul class="mt-4">
-									<li>5GB Disk Space</li>
-									<li class="my-3">One User</li>
-									<li> 2GB Storage</li>
-									<li class="my-3">24x7 Support</li>
-								</ul>
-								<a href="#" data-toggle="modal" data-target="#myModal1" class="button mt-4">Sign Up</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-6  price-info">
-						<div class="prices border p-4">
-							<div class="prices-top">
-								<div class="dodecagon s1">
-									<div class="dodecagon-in s1">
-										<div class="dodecagon-bg s1">
-											<h3 class="text-center text-white rounded-circle">$80</h3>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="prices-bottom text-center">
-								<div class="prices-h border-bottom p-4">
-									<h4>Premium</h4>
-								</div>
-								<ul class="mt-4">
-									<li>5GB Disk Space</li>
-									<li class="my-3">One User</li>
-									<li> 2GB Storage</li>
-									<li class="my-3">24x7 Support</li>
-								</ul>
-								<a href="#" data-toggle="modal" data-target="#myModal1" class="button mt-4">Sign Up</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-6  price-info">
-						<div class="prices border p-4">
-							<div class="prices-top">
-								<div class="dodecagon s1">
-									<div class="dodecagon-in s1">
-										<div class="dodecagon-bg s1">
-											<h3 class="text-center text-white rounded-circle">$60</h3>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="prices-bottom text-center">
-								<div class="prices-h border-bottom p-4">
-									<h4>Golden</h4>
-								</div>
-								<ul class="mt-4">
-									<li>5GB Disk Space</li>
-									<li class="my-3">One User</li>
-									<li> 2GB Storage</li>
-									<li class="my-3">24x7 Support</li>
-								</ul>
-								<a href="#" data-toggle="modal" data-target="#myModal1" class="button mt-4">Sign Up</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-6  price-info">
-						<div class="prices border p-4">
-							<div class="prices-top">
-								<div class="dodecagon s1">
-									<div class="dodecagon-in s1">
-										<div class="dodecagon-bg s1">
-											<h3 class="text-center text-white rounded-circle">$30</h3>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="prices-bottom text-center">
-								<div class="prices-h border-bottom p-4">
-									<h4>Ultimate</h4>
-								</div>
-								<ul class="mt-4">
-									<li>5GB Disk Space</li>
-									<li class="my-3">One User</li>
-									<li> 2GB Storage</li>
-									<li class="my-3">24x7 Support</li>
-								</ul>
-								<a href="#" data-toggle="modal" data-target="#myModal1" class="button mt-4">Sign Up</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
--->
-
-	<!-- Modal1 -->
-	<!-- <div class="modal" tabindex="-1" role="dialog" id="myModal1">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content book-form p-4">
-				<div class="modal-header p-3">
-					<h5 class="modal-title">Sign Up</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<form action="#" method="post">
-						<div class="form-group">
-							<input type="text" name="Name" placeholder="Your Name" class="form-control" required="" />
-						</div>
-						<div class="form-group">
-							<input type="email" name="Email" class="email form-control" placeholder="Email"
-								required="" />
-						</div>
-						<div class="form-group">
-							<input type="password" name="Password" class="password form-control" placeholder="Password"
-								required="" />
-						</div>
-						<div class="check-box">
-							<input name="chekbox" type="checkbox" id="brand" value="">
-							<label for="brand">
-								<span></span>Remember Me</label>
-						</div>
-						<input type="submit" class="mt-4" value="Sign Up">
-					</form>
-				</div>
-			</div>
-		</div>
-	</div> -->
-	<!-- //Modal1 -->
-	<!--//price-->
-
-
-
-
-	<!-- 计智伟老师 -->
-	<div class="about-w3l py-5">
-		<div class="container py-xl-5 py-lg-3">
-			<div class="title text-center mb-sm-5 mb-4">
-				<!-- <h3 class="text-dark font-italic">最新动态</h3> -->
-				<h3>CDSIC团队PI</h3>
-				<!-- <p>sed quia non numquam eius modi tempora</p> -->
-			</div>
-			<div class="row">
-				<div class="col-xl-1"></div>
-				<div class="col-xl-6 agile_banner_bottom_grid">
-					<div class="row">
-						<div
-							class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pr-sm-0">
-							<img src="images/member/计智伟.jpg" alt=" " class="img-fluid img-thumbnail" />
-						</div>
-						<div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos px-sm-0">
-							<div class="agent-text-w3ls p-4">
-								<h3>计智伟&nbsp;<span style="font-size: 18px;">博士</span></h3>
-								<p class="mt-2 mb-3">教授,博士生导师</p>
-								<div class="w3ls-agent-info border-top pt-4 mb-4">
-									<ul>
-										<li class="text-dark">
-											<i class="fas fa-map-marker mr-2"></i> 南京市卫岗1号综合楼A622-1
-										</li>
-										<li class="text-dark my-3">
-											<i class="fas fa-phone mr-2"></i> +86 25 84395042
-										</li>
-										<li>
-											<i class="fas fa-envelope mr-2"></i>
-											<a href="mailto:Zhiwei.Ji@njau.edu.cn"
-												class="text-dark">Zhiwei.Ji@njau.edu.cn</a>
-										</li>
-									</ul>
-								</div>
-								<div class="social-bnr-agileits">
-									<ul>
-										<li>
-											<a href="mailto:Zhiwei.Ji@njau.edu.cn" class="text-dark">
-												<i class="fas fa-envelope"></i>
-											</a>
-										</li>
-										<li class="mx-3">
-											<a href="#" class="text-dark">
-												<i class="fab fa-weixin"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-battery-full"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-1"></div>
-				<div class="col-xl-4 about-text-right mt-lg-0 mt-5">
-					<h3 class="about-title mb-md-4 mb-3">研究领域</h3>
-					<!-- <p>大数据分析、建模和预测</p> -->
-					<br>
-					<div class="row">
-
-						<div class="col-sm-9 col-8 right-text-whtree border-left pl-3">
-							<p style="font-size: 16px;">大数据分析、建模和预测</p>
-						</div>
-					</div>
-					<br>
-					<div class="row my-4">
-
-						<div class="col-sm-9 col-8 right-text-whtree border-left pl-3">
-							<p style="font-size: 16px;">人工智能理论与应用研究</p>
-						</div>
-					</div>
-					<br>
-					<div class="row">
-
-						<div class="col-sm-9 col-8 right-text-whtree border-left pl-3">
-							<p style="font-size: 16px;">生物信息与系统生物学</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //about -->
-
-
-	<!-- team -->
-	<div class="team py-5">
-		<div class="container py-xl-5 py-lg-3">
-			<div class="title text-center mb-sm-5 mb-4">
-				<!-- <h3 class="text-dark font-italic">科研队伍</h3> -->
-				<h3>科研队伍</h3>
-				<!-- <p>sed quia non numquam eius modi tempora</p> -->
-			</div>
-			<div class="row agile_banner_bottom_grids">
-				<div class="col-xl-6 agile_banner_bottom_grid">
-					<div class="row">
-						<div
-							class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pr-sm-0">
-							<img src="images/member/谢忠红.jpg" style="width: 223.5px;height:310.97px;" alt=" "
-								class="img-fluid img-thumbnail" />
-						</div>
-						<div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos px-sm-0">
-							<div class="agent-text-w3ls p-4">
-								<h3>谢忠红&nbsp;<span style="font-size: 18px;">博士</span></h3>
-								<p class="mt-2 mb-3">副教授，硕士生导师</p>
-								<div class="w3ls-agent-info border-top pt-4 mb-4">
-									<ul>
-										<li class="text-dark">
-											<i class="fas fa-map-marker mr-2"></i> 南京市卫岗1号综合楼A608-1
-										</li>
-										<li class="text-dark my-3">
-											<i class="fas fa-phone mr-2"></i> +86 25 84395042
-										</li>
-										<li>
-											<i class="fas fa-envelope mr-2"></i>
-											<a href="mailto:info@example.com" class="text-dark">info@njau.edu.cn</a>
-										</li>
-									</ul>
-								</div>
-								<div class="social-bnr-agileits">
-									<ul>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-envelope"></i>
-											</a>
-										</li>
-										<li class="mx-3">
-											<a href="#" class="text-dark">
-												<i class="fab fa-weixin"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-battery-full"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-6 agile_banner_bottom_grid mt-xl-0 mt-4">
-					<div class="row">
-						<div
-							class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pr-sm-0">
-							<img src="images/member/谢小军.jpg" alt=" " class="img-fluid img-thumbnail" />
-						</div>
-						<div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos px-sm-0">
-							<div class="agent-text-w3ls p-4">
-								<h3>谢小军&nbsp;<span style="font-size: 18px;">博士</span></h3>
-								<p class="mt-2 mb-3">讲师</p>
-								<div class="w3ls-agent-info border-top pt-4 mb-4">
-									<ul>
-										<li class="text-dark">
-											<i class="fas fa-map-marker mr-2"></i> 南京市卫岗1号综合楼A508
-										</li>
-										<li class="text-dark my-3">
-											<i class="fas fa-phone mr-2"></i> +86 25 84395042
-										</li>
-										<li>
-											<i class="fas fa-envelope mr-2"></i>
-											<a href="mailto:info@example.com" class="text-dark">xxj@njau.edu.cn</a>
-										</li>
-									</ul>
-								</div>
-								<div class="social-bnr-agileits">
-									<ul>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-envelope"></i>
-											</a>
-										</li>
-										<li class="mx-3">
-											<a href="#" class="text-dark">
-												<i class="fab fa-weixin"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-battery-full"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row agile_banner_bottom_grids my-xl-5 my-4">
-				<div class="col-xl-6 agile_banner_bottom_grid">
-					<div class="row">
-						<div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos pr-sm-0">
-							<div class="agent-text-w3ls p-4">
-								<h3>冯佳睿</h3>
-								<p class="mt-2 mb-3">博士研究生</p>
-								<div class="w3ls-agent-info border-top pt-4 mb-4">
-									<ul>
-										<li class="text-dark">
-											<i class="fas fa-map-marker mr-2"></i> 南京农业大学
-										</li>
-										<li class="text-dark my-3">
-											<!-- <i class="fas fa-broadcast-tower"></i> -->
-											<i class="fab fa-angellist mr-2"></i> 研究兴趣：生物信息学
-										</li>
-										<li>
-											<i class="fas fa-envelope mr-2"></i>
-											<a href="mailto:info@example.com"
-												class="text-dark">2020212018@njau.edu.cn</a>
-										</li>
-									</ul>
-								</div>
-								<div class="social-bnr-agileits">
-									<ul>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-envelope"></i>
-											</a>
-										</li>
-										<li class="mx-3">
-											<a href="#" class="text-dark">
-												<i class="fab fa-weixin"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-battery-full"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div
-							class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pl-sm-0">
-							<img src="images/member/冯佳睿.jpg" alt=" " class="img-fluid img-thumbnail" />
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-6 agile_banner_bottom_grid mt-xl-0 mt-4">
-					<div class="row">
-						<div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos pr-sm-0">
-							<div class="agent-text-w3ls p-4">
-								<h3>陈筱</h3>
-								<p class="mt-2 mb-3">博士研究生</p>
-								<div class="w3ls-agent-info border-top pt-4 mb-4">
-									<ul>
-										<li class="text-dark">
-											<i class="fas fa-map-marker mr-2"></i> 南京农业大学
-										</li>
-										<li class="text-dark my-3">
-											<i class="fab fa-angellist mr-2"></i> 研究兴趣：生物信息学
-										</li>
-										<li>
-											<i class="fas fa-envelope mr-2"></i>
-											<a href="mailto:info@example.com"
-												class="text-dark">2021212015@stu.njau.edu.cn</a>
-										</li>
-									</ul>
-								</div>
-								<div class="social-bnr-agileits">
-									<ul>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-envelope"></i>
-											</a>
-										</li>
-										<li class="mx-3">
-											<a href="#" class="text-dark">
-												<i class="fab fa-weixin"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-battery-full"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div
-							class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pl-sm-0">
-							<img src="images/member/陈筱.jpg" alt=" " class="img-fluid img-thumbnail" />
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row agile_banner_bottom_grids">
-				<div class="col-xl-6 agile_banner_bottom_grid">
-					<div class="row">
-						<div
-							class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pr-sm-0">
-							<img src="images/member/刘超逸.jpg" alt=" " class="img-fluid img-thumbnail" />
-						</div>
-						<div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos px-sm-0">
-							<div class="agent-text-w3ls p-4">
-								<h3>刘超逸</h3>
-								<p class="mt-2 mb-3">硕士研究生</p>
-								<div class="w3ls-agent-info border-top pt-4 mb-4">
-									<ul>
-										<li class="text-dark">
-											<i class="fas fa-map-marker mr-2"></i> 南京农业大学
-										</li>
-										<li class="text-dark my-3">
-											<i class="fab fa-angellist mr-2"></i> 研究兴趣：时序数据挖掘
-										</li>
-										<li>
-											<i class="fas fa-envelope mr-2"></i>
-											<a href="mailto:info@example.com"
-												class="text-dark">Chaoyi.Liu@stu.njau.edu.cn</a>
-										</li>
-									</ul>
-								</div>
-								<div class="social-bnr-agileits">
-									<ul>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-envelope"></i>
-											</a>
-										</li>
-										<li class="mx-3">
-											<a href="#" class="text-dark">
-												<i class="fab fa-weixin"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-battery-full"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-6 agile_banner_bottom_grid mt-xl-0 mt-4">
-					<div class="row">
-						<div
-							class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pr-sm-0">
-							<img src="images/member/夏菲.jpg" style="width: 223.5px;height:310.97px;" alt=" "
-								class="img-fluid img-thumbnail" />
-						</div>
-						<div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos px-sm-0">
-							<div class="agent-text-w3ls p-4">
-								<h3>夏菲</h3>
-								<p class="mt-2 mb-3">硕士研究生</p>
-								<div class="w3ls-agent-info border-top pt-4 mb-4">
-									<ul>
-										<li class="text-dark">
-											<i class="fas fa-map-marker mr-2"></i> 南京农业大学
-										</li>
-										<li class="text-dark my-3">
-											<i class="fab fa-angellist mr-2"></i> 研究兴趣：图像处理
-										</li>
-										<li>
-											<i class="fas fa-envelope mr-2"></i>
-											<a href="mailto:info@example.com"
-												class="text-dark">2020814040@stu.njau.edu.cn</a>
-										</li>
-									</ul>
-								</div>
-								<div class="social-bnr-agileits">
-									<ul>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-envelope"></i>
-											</a>
-										</li>
-										<li class="mx-3">
-											<a href="#" class="text-dark">
-												<i class="fab fa-weixin"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-battery-full"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="row agile_banner_bottom_grids my-xl-5 my-4">
-				<div class="col-xl-6 agile_banner_bottom_grid">
-					<div class="row">
-						<div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos pr-sm-0">
-							<div class="agent-text-w3ls p-4">
-								<h3>王宗钦</h3>
-								<p class="mt-2 mb-3">硕士研究生</p>
-								<div class="w3ls-agent-info border-top pt-4 mb-4">
-									<ul>
-										<li class="text-dark">
-											<i class="fas fa-map-marker mr-2"></i> 南京农业大学
-										</li>
-										<li class="text-dark my-3">
-											<i class="fab fa-angellist mr-2"></i> 研究兴趣：生物信息学
-										</li>
-										<li>
-											<i class="fas fa-envelope mr-2"></i>
-											<a href="mailto:info@example.com" style="width: 223.5px;height:310.97px;"
-												class="text-dark">wang.zq@stu.njau.edu.cn</a>
-										</li>
-									</ul>
-								</div>
-								<div class="social-bnr-agileits">
-									<ul>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-envelope"></i>
-											</a>
-										</li>
-										<li class="mx-3">
-											<a href="#" class="text-dark">
-												<i class="fab fa-weixin"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-battery-full"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div
-							class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pl-sm-0">
-							<img src="images/member/王宗钦.jpg" alt=" " class="img-fluid img-thumbnail" />
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-6 agile_banner_bottom_grid mt-xl-0 mt-4">
-					<div class="row">
-						<div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos pr-sm-0">
-							<div class="agent-text-w3ls p-4">
-								<h3>谢诗婕</h3>
-								<p class="mt-2 mb-3">硕士研究生</p>
-								<div class="w3ls-agent-info border-top pt-4 mb-4">
-									<ul>
-										<li class="text-dark">
-											<i class="fas fa-map-marker mr-2"></i> 南京农业大学
-										</li>
-										<li class="text-dark my-3">
-											<i class="fab fa-angellist mr-2"></i> 研究兴趣：生物信息学
-										</li>
-										<li>
-											<i class="fas fa-envelope mr-2"></i>
-											<a href="mailto:info@example.com"
-												class="text-dark">202014007@stu.njau.edu.cn</a>
-										</li>
-									</ul>
-								</div>
-								<div class="social-bnr-agileits">
-									<ul>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-envelope"></i>
-											</a>
-										</li>
-										<li class="mx-3">
-											<a href="#" class="text-dark">
-												<i class="fab fa-weixin"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-battery-full"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div
-							class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pl-sm-0">
-							<img src="images/member/谢诗婕2.jpg" alt=" " class="img-fluid img-thumbnail" />
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="row agile_banner_bottom_grids">
-
-				<div class="col-xl-6 agile_banner_bottom_grid">
-					<div class="row">
-						<div
-							class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pr-sm-0">
-							<img src="images/member/池路通.jpg" alt=" " class="img-fluid img-thumbnail" />
-						</div>
-						<div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos px-sm-0">
-							<div class="agent-text-w3ls p-4">
-								<h3>池路通</h3>
-								<p class="mt-2 mb-3">硕士研究生</p>
-								<div class="w3ls-agent-info border-top pt-4 mb-4">
-									<ul>
-										<li class="text-dark">
-											<i class="fas fa-map-marker mr-2"></i> 南京农业大学
-										</li>
-										<li class="text-dark my-3">
-											<i class="fab fa-angellist mr-2"></i> 研究兴趣：图像处理
-										</li>
-										<li>
-											<i class="fas fa-envelope mr-2"></i>
-											<a href="mailto:info@example.com" class="text-dark">clt@stu.njau.edu.cn</a>
-										</li>
-									</ul>
-								</div>
-								<div class="social-bnr-agileits">
-									<ul>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-envelope"></i>
-											</a>
-										</li>
-										<li class="mx-3">
-											<a href="#" class="text-dark">
-												<i class="fab fa-weixin"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-battery-full"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xl-6 agile_banner_bottom_grid mt-xl-0 mt-4">
-					<div class="row">
-						<div
-							class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pr-sm-0">
-							<img src="images/member/匿名图片.jpg" style="width: 223.5px;height:310.97px;" alt=" "
-								class="img-fluid img-thumbnail" />
-						</div>
-						<div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos px-sm-0">
-							<div class="agent-text-w3ls p-4">
-								<h3>尹涛</h3>
-								<p class="mt-2 mb-3">本科生</p>
-								<div class="w3ls-agent-info border-top pt-4 mb-4">
-									<ul>
-										<li class="text-dark">
-											<i class="fas fa-map-marker mr-2"></i> 南京农业大学
-										</li>
-										<li class="text-dark my-3">
-											<i class="fab fa-angellist mr-2"></i> 研究兴趣：机器学习
-										</li>
-										<li>
-											<i class="fas fa-envelope mr-2"></i>
-											<a href="mailto:info@example.com" class="text-dark">1789111415@qq.com</a>
-										</li>
-									</ul>
-								</div>
-								<div class="social-bnr-agileits">
-									<ul>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-envelope"></i>
-											</a>
-										</li>
-										<li class="mx-3">
-											<a href="#" class="text-dark">
-												<i class="fab fa-weixin"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="text-dark">
-												<i class="fas fa-battery-full"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<!-- testimonials -->
-	<!--
-	<div class="testimonials py-5">
-		<div class="container py-xl-5 py-lg-3">
-			<div class="title text-center mb-sm-5 mb-4">
-				<h3 class="text-dark font-italic">Testimonials</h3>
-				<p>sed quia non numquam eius modi tempora</p>
-			</div>
-			<div class="w3_testimonials_grids">
-				<section class="slider">
-					<div class="flexslider">
-						<ul class="slides">
-							<li>
-								<div class="w3_testimonials_grid p-md-5 p-4 mt-1 mb-4 mx-auto">
-									<h4 class="text-dark text-center font-weight-light">
-										Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
-										minus id quod possimus, omnis voluptas,
-										nobis est eligendi optio cumque nihil impedit quo minus id quod possimus, omnis
-										voluptas.
-									</h4>
-									<div class="row mt-4">
-										<div class="col-6 test-agiles text-right">
-											<img src="images/te1.jpg" alt=" " class="img-fluid rounded-circle" />
-										</div>
-										<div class="col-6 right-text-agiles text-left mt-5">
-											<h5 class="font-weight-bold">John Frank</h5>
-											<p class="text-dark mt-2">Tempore Quo</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="w3_testimonials_grid p-md-5 p-4 mt-1 mb-4 mx-auto">
-									<h4 class="text-dark text-center font-weight-light">
-										Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
-										minus id quod possimus, omnis voluptas,
-										nobis est eligendi optio cumque nihil impedit quo minus id quod possimus, omnis
-										voluptas.
-									</h4>
-									<div class="row mt-4">
-										<div class="col-6 test-agiles text-right">
-											<img src="images/te2.jpg" alt=" " class="img-fluid rounded-circle" />
-										</div>
-										<div class="col-6 right-text-agiles text-left mt-5">
-											<h5 class="font-weight-bold">Michael Doe</h5>
-											<p class="text-dark mt-2">Maxime Omni</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="w3_testimonials_grid p-md-5 p-4 mt-1 mb-4 mx-auto">
-									<h4 class="text-dark text-center font-weight-light">
-										Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
-										minus id quod possimus, omnis voluptas,
-										nobis est eligendi optio cumque nihil impedit quo minus id quod possimus, omnis
-										voluptas.
-									</h4>
-									<div class="row mt-4">
-										<div class="col-6 test-agiles text-right">
-											<img src="images/te3.jpg" alt=" " class="img-fluid rounded-circle" />
-										</div>
-										<div class="col-6 right-text-agiles text-left mt-5">
-											<h5 class="font-weight-bold">Thomas Carl</h5>
-											<p class="text-dark mt-2">Placeat Quo</p>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</section>
-			</div>
-		</div>
-	</div>-->
-	<!-- //testimonials -->
-
-	<!-- footer top -->
-	<br><br><br>
-	<div class="middle-content py-5">
-		<div class="container py-xl-5 py-lg-3">
-			<div class="row">
-				<div class="col-lg-6 left-middle-wthree">
-					<h4 class="text-white font-weight-bold text-uppercase">CDSIC-NJAU</h4>
-					<p class="mt-3">欢迎你的加入!</p>
-				</div>
-				<div class="col-lg-6 left-middle-wthree mt-lg-0 mt-4">
-					<h4 class="font-weight-bold se-agilem">联系我们</h4>
-					<p class="mt-3">
-						<i class="fas fa-phone mr-3 text-white"></i>+86 25 84395042
-					</p>
-				</div>
-			</div>
-			<!-- <div class="img-calling">
-				<img src="images/1.png" alt="" class="img-fluid">
-			</div> -->
-		</div>
-	</div>
-	<!-- footer top -->
-
-	<!-- footer -->
-	<footer>
-		<div class="w3ls-footer-grids py-5">
-			<div class="container py-xl-5 py-lg-3">
-				<div class="row">
-					<div class="col-lg-8 col-md-9 w3l-footer">
-						<!-- footer logo -->
-						<h2 class="mb-3">
-							<a href="index.html">
-								<img src="images/logo/logo1.png" style="width: 55%;" alt="">
-							</a>
-						</h2>
-						<!-- //footer logo -->
-						<p>
-							&nbsp;&nbsp;&nbsp;&nbsp;本团队现与美国维克森林大学、德克萨斯大学、奥克兰大学、里海大学、新加坡国立大学和浙江大学的多个优秀团队建立了合作关系；课题组将每年选派老师或研究生出国访学。欢迎具有相关研究背景的海内外学者申请副教授、青年研究员、讲师，加盟我们的团队。
-							<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;大数据智能计算研究中心（筹）经过近 1 年的快速发展，已吸纳了优秀学者共 15 人，包括副教授和讲师共 3 人，博士和硕士研究生共 8
-							人，本科生 3
-							人。热忱欢迎数学（信息与计算科学、应用数学、统计学）、计算机（机器学习、计算机视觉、数据挖掘）、自动化（复杂系统建模与计算智能、生物特征识别）、生物信息与系统生物学等专业或方向的学生报考（申请）博士生、硕士生。也欢迎本校在读的优秀本科生加盟团队参加项目实训！
-						</p>
-					</div>
-					<!-- button -->
-					<div class="col-lg-4 col-md-3 w3l-footer text-md-right text-center my-md-0 my-4">
-						<a href="#" class="onclick_demo1 w3ls-button2 float-md-right text-white mt-md-5 mt-2">联系我们</a>
-					</div>
-					<!-- //button -->
-				</div>
-				<div class="row border-top mt-4 pt-lg-4 pt-3 text-lg-left text-center">
-					<!-- copyright -->
-					<p class="col-lg-8 copy-right-grids mt-lg-1">Copyright &copy; 2021.CDSIC-NJAU All rights
-						reserved.
-					</p>
-					<!-- //copyright -->
-					<!-- social icons -->
-					<div class="col-lg-4 w3social-icons text-lg-right text-center mt-lg-0 mt-3">
-						<ul>
-							<li>
-								<a href="#" class="rounded-circle">
-									<i class="fab fa-facebook-f"></i>
-								</a>
-							</li>
-							<li class="px-2">
-								<a href="#" class="rounded-circle">
-									<i class="fab fa-google-plus-g"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="rounded-circle">
-									<i class="fab fa-twitter"></i>
-								</a>
-							</li>
-							<li class="pl-2">
-								<a href="#" class="rounded-circle">
-									<i class="fab fa-dribbble"></i>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<!-- //social icons -->
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- //footer -->
-
-
-	<!-- Js files -->
-	<!-- Jquery -->
-	<script src="js/jquery-2.2.3.min.js"></script>
-	<!-- //Jquery -->
-
-	<!-- menu -->
-	<script src="js/menu.js"></script>
-	<!-- //menu -->
-
-	<!-- responsiveslides -->
-	<script src="js/responsiveslides.min.js"></script>
-	<script>
-		// You can also use "$(window).load(function() {"
-		$(function () {
-			// Slideshow 4
-			$("#slider3").responsiveSlides({
-				auto: true,
-				pager: true,
-				nav: false,
-				speed: 500,
-				namespace: "callbacks",
-				before: function () {
-					$('.events').append("<li>before event fired.</li>");
-				},
-				after: function () {
-					$('.events').append("<li>after event fired.</li>");
-				}
-			});
-		});
-	</script>
-	<!-- //responsiveslides -->
-
-	<!-- search-bar -->
-	<script src="js/main.js"></script>
-	<!-- //search-ba r-->
-
-	<!-- flexSlider (for testimonials) -->
-	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
-	<script defer src="js/jquery.flexslider.js"></script>
-	<script>
-		$(window).load(function () {
-			$('.flexslider').flexslider({
-				animation: "slide",
-				start: function (slider) {
-					$('body').removeClass('loading');
-				}
-			});
-		});
-	</script>
-	<!-- //flexSlider (for testimonials) -->
-
-	<script src="js/swiper-bundle.min.js"></script>
-	<script>
-		var swiper = new Swiper(".mySwiper", {
-			slidesPerView: 1,
-			spaceBetween: 30,
-			loop: true,
-			pagination: {
-				el: ".swiper-pagination",
-				clickable: true,
-			},
-			navigation: {
-				nextEl: ".swiper-button-next",
-				prevEl: ".swiper-button-prev",
-			},
-		});
-	</script>
-
-	<!-- pop-up-box -->
-	<script src="js/jquery.magnific-popup.js"></script>
-	<script>
-		$(document).ready(function () {
-			$('.popup-with-zoom-anim').magnificPopup({
-				type: 'inline',
-				fixedContentPos: false,
-				fixedBgPos: true,
-				overflowY: 'auto',
-				closeBtnInside: true,
-				preloader: false,
-				midClick: true,
-				removalDelay: 300,
-				mainClass: 'my-mfp-zoom-in'
-			});
-
-		});
-	</script>
-
-	<script>
-
-		$(".onclick_demo1").bind("click", function () {
-			alert("该功能暂未开放!");
-		})
-	</script>
-	<!-- //pop-up-box -->
-
-	<!-- stats numscroller-js-file -->
-	<script src="js/numscroller-1.0.js"></script>
-	<!-- //stats numscroller-js-file -->
-
-	<!-- smooth scrolling -->
-	<script src="js/SmoothScroll.min.js"></script>
-	<!-- //smooth scrolling -->
-
-	<!-- move-top -->
-	<script src="js/move-top.js"></script>
-	<!-- easing -->
-	<script src="js/easing.js"></script>
-	<!--  necessary snippets for few javascript files -->
-	<script src="js/land_mark.js"></script>
-
-	<script src="js/bootstrap.js"></script>
-	<!-- Necessary-JavaScript-File-For-Bootstrap -->
-	<!-- //Js files -->
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <h3 class="menu_title my-4">Menu</h3>
+                <ul class="list_load">
+                    <!-- <li class="list_item">
+                        <a href="all.html">All Pages</a>
+                    </li> -->
+                    <li class="list_item">
+                        <a href="index.html" class="active">首页</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="news.html">团队新闻</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="blog.html">科研成果</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="filed.html">研究方向</a>
+                    </li>
+                    <li class="list_item">
+                        <a class="onclick_demo" href="#">客座教授</a>
+                    </li>
+                    <li class="list_item">
+                        <a class="onclick_demo" href="#">联系我们</a>
+                    </li>
+                    <!-- <li class="list_item">
+                        <a class="onclick_demo" href="#">404 Error Page</a>
+                    </li>
+                    <li class="list_item">
+                        <a class="onclick_demo" href="#">Blog</a>
+                    </li>
+                    <li class="list_item">
+                        <a class="onclick_demo" href="#">Single Page</a>
+                    </li>
+                    <li class="list_item">
+                        <a class="onclick_demo" href="#">Contact Us</a>
+                    </li> -->
+                    <script>
+                        // $(".onclick_demo").onclick(function(){
+
+                        // 	console.log("1");
+                        // 	alert("该页面正在开发中,目前不开放!");
+
+                        // });
+
+                        $(".onclick_demo").bind("click", function () {
+                            console.log("1");
+                            alert("该页面正在开发中,目前暂不开放!");
+                        })
+
+                    </script>
+                </ul>
+            </div>
+        </div>
+        <!-- //menu -->
+    </header>
+    <!-- //header -->
+    <!-- banner-slider -->
+    <div class="w3l_banner_info" id="home">
+        <div class="slider">
+            <div class="callbacks_container">
+                <ul class="rslides" id="slider3">
+                    <li>
+
+                        <style>
+                            .a1 {
+                                background: url(/static/front/images/news/index.png) no-repeat 0px 0px;
+                            }
+
+                            .a2 {
+                                background: url(/static/front/images/news/index2.png) no-repeat 0px 0px;
+                            }
+
+                            .a3 {
+                                background: url(/static/front/images/a3.jpg) no-repeat 0px 0px;
+                            }
+
+                            .a4 {
+                                background: url(/static/front/images/a4.jfif) no-repeat 0px 0px;
+                            }
+
+                            .a1,
+                            .a2,
+                            .a3,
+                            .a4 {
+                                background-size: cover;
+                                -webkit-background-size: cover;
+                                -moz-background-size: cover;
+                                -o-background-size: cover;
+                                -ms-background-size: cover;
+                                min-height: 550px;
+                            }
+                        </style>
+
+                        <div class="slider-img a3">
+                            <div class="container">
+                                <div class="slider_banner_info ml-md-5 pl-md-5">
+                                    <!-- <h4 class="text-uppercase font-weight-light text-white">
+                                        Test
+                                        <span>Test Test</span> Test
+                                    </h4> -->
+                                    <!-- <a href="about.html" class="w3ls-button border text-white mt-md-5 mt-4">Read
+                                        More</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-img a1">
+                            <div class="container">
+                                <div class="slider_banner_info ml-md-5 pl-md-5">
+                                    <!-- <h4 class="text-uppercase font-weight-light text-white">Test
+                                        <span>Test Test</span> Test
+                                    </h4> -->
+                                    <!--
+                                    <a href="about.html" class="w3ls-button border text-white mt-md-5 mt-4">Read
+                                        More</a>-->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- <li>
+                        <div class="slider-img a4">
+                            <div class="container">
+                                <div class="slider_banner_info ml-md-5 pl-md-5">
+                                    <h4 class="text-uppercase font-weight-light text-white">Best
+                                        <span>Apartments</span> to Rent
+                                    </h4>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li> -->
+                    <!--
+                    <li>
+                        <div class="slider-img a4">
+                            <div class="container">
+                                <div class="slider_banner_info ml-md-5 pl-md-5">
+                                    <h4 class="text-uppercase font-weight-light text-white">Get
+                                        <span>Started Right</span> Now
+                                    </h4>
+                                    <a href="about.html" class="w3ls-button border text-white mt-md-5 mt-4">Read
+                                        More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- banner-slider -->
+</div>
+
+<!-- 最新动态 -->
+<div class="project-sec py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <div class="title text-center mb-sm-5 mb-4">
+            <h3>科研动态</h3>
+            <!-- <p>sed quia non numquam eius modi tempora</p> -->
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-5 project-left">
+                <div>
+                    <!-- <img src="images/project1.jpg" alt="" class="img-fluid">
+                    <div class="bottom-w3ls-agile p-4">
+                        <h4 class="text-dark mb-3">测试标题2</h4>
+                        <p class="text-white">test test test test test test test test test test test test test test
+                        </p>
+                    </div> -->
+
+                    <style>
+                        .mt-3 {
+                            margin-top: 2.22rem !important;
+                        }
+
+                        .blog-title {
+                            color: #FFC107;
+                            text-shadow: 1px 1px 1px rgba(233, 233, 233, 0.27);
+                        }
+                    </style>
+                    <!-- 团队新闻 -->
+                    <div class="categories p-4 border" style="margin-top: 0.55rem;">
+                        <a href="news.html">
+                            <h3 class="blog-title">&nbsp;团队新闻</h3>
+                        </a>
+                        <ul>
+                            <li class="mt-3" th:each="neww : ${news}">
+                                <a  href="news3.html" style="font-size: 16px;" th:text="${#strings.abbreviate(neww.ntitle,17)}">校领导到研工部、研究生院调研</a>
+                                <span style="float: right;" th:text="${#dates.format(neww.ndate,'MM-dd')}">12-15</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 上传简历 -->
+                <div class="d-flex sec-proj-wthree mt-4">
+                    <div class="col-7 img-left-projw3 pr-0 p-0">
+                        <img src="/static/front/images/join.png" alt="" class="img-fluid">
+                    </div>
+
+                    <div class="col-5 bottom-w3ls-agile2 pl-0 p-0">
+                        <a href="mailto:Zhiwei.Ji@njau.edu.cn">
+                            <h4 class=" border py-xl-5 px-3" style="color: blue;">Upload Resume</h4>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-7 project-right mt-md-0 mt-5">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" th:each="pro:${project}">
+                            <a href="single.html">
+                                <div class="carousel-inner">
+                                    <div th:attr="style='min-height:408px; background: url('+${pro.pimage}+') no-repeat center;background-size: cover;'"
+                                         style="min-height: 408px; background: url(/static/front/images/news/Figure1.jpg) no-repeat center;background-size: cover;"></div>
+                                </div>
+                                <div class="bottom-w3ls-agile p-4">
+                                    <h4 class="text-dark mb-3">最新动态</h4>
+                                    <p class="text-white" style="font-size: 17px;"  th:utext="${pro.psynopsis}+'<br><br>'" >
+                                        计智伟教授团队利用系统生物学方法揭示阿尔兹海默病中TREM2调控机制的时序特性
+                                        <br><br>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination" style="color:aliceblue;"></div>
+
+
+            </div>
+
+
+        </div>
+        <div class="text-center blog-button">
+            <a href="blog.html" class="w3ls-button2 text-white mt-md-5 mt-4">查&nbsp;看&nbsp;更&nbsp;多</a>
+        </div>
+    </div>
+
+
+</div>
+
+
+<!-- 计智伟老师 -->
+<div class="about-w3l py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <div class="title text-center mb-sm-5 mb-4">
+            <!-- <h3 class="text-dark font-italic">最新动态</h3> -->
+            <h3>CDSIC团队PI</h3>
+            <!-- <p>sed quia non numquam eius modi tempora</p> -->
+        </div>
+        <div class="row">
+            <div class="col-xl-1"></div>
+            <div class="col-xl-6 agile_banner_bottom_grid">
+                <div class="row">
+                    <div
+                            class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pr-sm-0">
+                        <img src="/static/front/images/member/计智伟.jpg" alt=" " class="img-fluid img-thumbnail"/>
+                    </div>
+                    <div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos px-sm-0">
+                        <div class="agent-text-w3ls p-4">
+                            <h3>计智伟&nbsp;<span style="font-size: 18px;">博士</span></h3>
+                            <p class="mt-2 mb-3">教授,博士生导师</p>
+                            <div class="w3ls-agent-info border-top pt-4 mb-4">
+                                <ul>
+                                    <li class="text-dark">
+                                        <i class="fas fa-map-marker mr-2"></i> 南京市卫岗1号综合楼A622-1
+                                    </li>
+                                    <li class="text-dark my-3">
+                                        <i class="fas fa-phone mr-2"></i> +86 25 84395042
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope mr-2"></i>
+                                        <a href="mailto:Zhiwei.Ji@njau.edu.cn"
+                                           class="text-dark">Zhiwei.Ji@njau.edu.cn</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="social-bnr-agileits">
+                                <ul>
+                                    <li>
+                                        <a href="mailto:Zhiwei.Ji@njau.edu.cn" class="text-dark">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                    <li class="mx-3">
+                                        <a href="#" class="text-dark">
+                                            <i class="fab fa-weixin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-battery-full"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-1"></div>
+            <div class="col-xl-4 about-text-right mt-lg-0 mt-5">
+                <h3 class="about-title mb-md-4 mb-3">研究领域</h3>
+                <!-- <p>大数据分析、建模和预测</p> -->
+                <br>
+                <div class="row">
+
+                    <div class="col-sm-9 col-8 right-text-whtree border-left pl-3">
+                        <p style="font-size: 16px;">大数据分析、建模和预测</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row my-4">
+
+                    <div class="col-sm-9 col-8 right-text-whtree border-left pl-3">
+                        <p style="font-size: 16px;">人工智能理论与应用研究</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+
+                    <div class="col-sm-9 col-8 right-text-whtree border-left pl-3">
+                        <p style="font-size: 16px;">生物信息与系统生物学</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //about -->
+
+<!-- team -->
+<div class="team py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <div class="title text-center mb-sm-5 mb-4">
+            <!-- <h3 class="text-dark font-italic">科研队伍</h3> -->
+            <h3>科研队伍</h3>
+            <!-- <p>sed quia non numquam eius modi tempora</p> -->
+        </div>
+        <div class="row agile_banner_bottom_grids">
+            <div class="col-xl-6 agile_banner_bottom_grid">
+                <div class="row">
+                    <div
+                            class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pr-sm-0">
+                        <img src="/static/front/images/member/谢忠红.jpg" style="width: 223.5px;height:310.97px;" alt=" "
+                             class="img-fluid img-thumbnail"/>
+                    </div>
+                    <div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos px-sm-0">
+                        <div class="agent-text-w3ls p-4">
+                            <h3>谢忠红&nbsp;<span style="font-size: 18px;">博士</span></h3>
+                            <p class="mt-2 mb-3">副教授，硕士生导师</p>
+                            <div class="w3ls-agent-info border-top pt-4 mb-4">
+                                <ul>
+                                    <li class="text-dark">
+                                        <i class="fas fa-map-marker mr-2"></i> 南京市卫岗1号综合楼A608-1
+                                    </li>
+                                    <li class="text-dark my-3">
+                                        <i class="fas fa-phone mr-2"></i> +86 25 84395042
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope mr-2"></i>
+                                        <a href="mailto:info@example.com" class="text-dark">info@njau.edu.cn</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="social-bnr-agileits">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                    <li class="mx-3">
+                                        <a href="#" class="text-dark">
+                                            <i class="fab fa-weixin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-battery-full"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 agile_banner_bottom_grid mt-xl-0 mt-4">
+                <div class="row">
+                    <div
+                            class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pr-sm-0">
+                        <img src="/static/front/images/member/谢小军.jpg" alt=" " class="img-fluid img-thumbnail"/>
+                    </div>
+                    <div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos px-sm-0">
+                        <div class="agent-text-w3ls p-4">
+                            <h3>谢小军&nbsp;<span style="font-size: 18px;">博士</span></h3>
+                            <p class="mt-2 mb-3">讲师</p>
+                            <div class="w3ls-agent-info border-top pt-4 mb-4">
+                                <ul>
+                                    <li class="text-dark">
+                                        <i class="fas fa-map-marker mr-2"></i> 南京市卫岗1号综合楼A508
+                                    </li>
+                                    <li class="text-dark my-3">
+                                        <i class="fas fa-phone mr-2"></i> +86 25 84395042
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope mr-2"></i>
+                                        <a href="mailto:info@example.com" class="text-dark">xxj@njau.edu.cn</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="social-bnr-agileits">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                    <li class="mx-3">
+                                        <a href="#" class="text-dark">
+                                            <i class="fab fa-weixin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-battery-full"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row agile_banner_bottom_grids my-xl-5 my-4">
+            <div class="col-xl-6 agile_banner_bottom_grid">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos pr-sm-0">
+                        <div class="agent-text-w3ls p-4">
+                            <h3>冯佳睿</h3>
+                            <p class="mt-2 mb-3">博士研究生</p>
+                            <div class="w3ls-agent-info border-top pt-4 mb-4">
+                                <ul>
+                                    <li class="text-dark">
+                                        <i class="fas fa-map-marker mr-2"></i> 南京农业大学
+                                    </li>
+                                    <li class="text-dark my-3">
+                                        <!-- <i class="fas fa-broadcast-tower"></i> -->
+                                        <i class="fab fa-angellist mr-2"></i> 研究兴趣：生物信息学
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope mr-2"></i>
+                                        <a href="mailto:info@example.com"
+                                           class="text-dark">2020212018@njau.edu.cn</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="social-bnr-agileits">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                    <li class="mx-3">
+                                        <a href="#" class="text-dark">
+                                            <i class="fab fa-weixin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-battery-full"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                            class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pl-sm-0">
+                        <img src="/static/front/images/member/冯佳睿.jpg" alt=" " class="img-fluid img-thumbnail"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 agile_banner_bottom_grid mt-xl-0 mt-4">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos pr-sm-0">
+                        <div class="agent-text-w3ls p-4">
+                            <h3>陈筱</h3>
+                            <p class="mt-2 mb-3">博士研究生</p>
+                            <div class="w3ls-agent-info border-top pt-4 mb-4">
+                                <ul>
+                                    <li class="text-dark">
+                                        <i class="fas fa-map-marker mr-2"></i> 南京农业大学
+                                    </li>
+                                    <li class="text-dark my-3">
+                                        <i class="fab fa-angellist mr-2"></i> 研究兴趣：生物信息学
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope mr-2"></i>
+                                        <a href="mailto:info@example.com"
+                                           class="text-dark">2021212015@stu.njau.edu.cn</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="social-bnr-agileits">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                    <li class="mx-3">
+                                        <a href="#" class="text-dark">
+                                            <i class="fab fa-weixin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-battery-full"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                            class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pl-sm-0">
+                        <img src="/static/front/images/member/陈筱.jpg" alt=" " class="img-fluid img-thumbnail"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row agile_banner_bottom_grids">
+            <div class="col-xl-6 agile_banner_bottom_grid">
+                <div class="row">
+                    <div
+                            class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pr-sm-0">
+                        <img src="/static/front/images/member/刘超逸.jpg" alt=" " class="img-fluid img-thumbnail"/>
+                    </div>
+                    <div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos px-sm-0">
+                        <div class="agent-text-w3ls p-4">
+                            <h3>刘超逸</h3>
+                            <p class="mt-2 mb-3">硕士研究生</p>
+                            <div class="w3ls-agent-info border-top pt-4 mb-4">
+                                <ul>
+                                    <li class="text-dark">
+                                        <i class="fas fa-map-marker mr-2"></i> 南京农业大学
+                                    </li>
+                                    <li class="text-dark my-3">
+                                        <i class="fab fa-angellist mr-2"></i> 研究兴趣：时序数据挖掘
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope mr-2"></i>
+                                        <a href="mailto:info@example.com"
+                                           class="text-dark">Chaoyi.Liu@stu.njau.edu.cn</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="social-bnr-agileits">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                    <li class="mx-3">
+                                        <a href="#" class="text-dark">
+                                            <i class="fab fa-weixin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-battery-full"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 agile_banner_bottom_grid mt-xl-0 mt-4">
+                <div class="row">
+                    <div
+                            class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pr-sm-0">
+                        <img src="/static/front/images/member/夏菲.jpg" style="width: 223.5px;height:310.97px;" alt=" "
+                             class="img-fluid img-thumbnail"/>
+                    </div>
+                    <div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos px-sm-0">
+                        <div class="agent-text-w3ls p-4">
+                            <h3>夏菲</h3>
+                            <p class="mt-2 mb-3">硕士研究生</p>
+                            <div class="w3ls-agent-info border-top pt-4 mb-4">
+                                <ul>
+                                    <li class="text-dark">
+                                        <i class="fas fa-map-marker mr-2"></i> 南京农业大学
+                                    </li>
+                                    <li class="text-dark my-3">
+                                        <i class="fab fa-angellist mr-2"></i> 研究兴趣：图像处理
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope mr-2"></i>
+                                        <a href="mailto:info@example.com"
+                                           class="text-dark">2020814040@stu.njau.edu.cn</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="social-bnr-agileits">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                    <li class="mx-3">
+                                        <a href="#" class="text-dark">
+                                            <i class="fab fa-weixin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-battery-full"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row agile_banner_bottom_grids my-xl-5 my-4">
+            <div class="col-xl-6 agile_banner_bottom_grid">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos pr-sm-0">
+                        <div class="agent-text-w3ls p-4">
+                            <h3>王宗钦</h3>
+                            <p class="mt-2 mb-3">硕士研究生</p>
+                            <div class="w3ls-agent-info border-top pt-4 mb-4">
+                                <ul>
+                                    <li class="text-dark">
+                                        <i class="fas fa-map-marker mr-2"></i> 南京农业大学
+                                    </li>
+                                    <li class="text-dark my-3">
+                                        <i class="fab fa-angellist mr-2"></i> 研究兴趣：生物信息学
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope mr-2"></i>
+                                        <a href="mailto:info@example.com" style="width: 223.5px;height:310.97px;"
+                                           class="text-dark">wang.zq@stu.njau.edu.cn</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="social-bnr-agileits">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                    <li class="mx-3">
+                                        <a href="#" class="text-dark">
+                                            <i class="fab fa-weixin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-battery-full"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                            class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pl-sm-0">
+                        <img src="/static/front/images/member/王宗钦.jpg" alt=" " class="img-fluid img-thumbnail"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 agile_banner_bottom_grid mt-xl-0 mt-4">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos pr-sm-0">
+                        <div class="agent-text-w3ls p-4">
+                            <h3>谢诗婕</h3>
+                            <p class="mt-2 mb-3">硕士研究生</p>
+                            <div class="w3ls-agent-info border-top pt-4 mb-4">
+                                <ul>
+                                    <li class="text-dark">
+                                        <i class="fas fa-map-marker mr-2"></i> 南京农业大学
+                                    </li>
+                                    <li class="text-dark my-3">
+                                        <i class="fab fa-angellist mr-2"></i> 研究兴趣：生物信息学
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope mr-2"></i>
+                                        <a href="mailto:info@example.com"
+                                           class="text-dark">202014007@stu.njau.edu.cn</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="social-bnr-agileits">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                    <li class="mx-3">
+                                        <a href="#" class="text-dark">
+                                            <i class="fab fa-weixin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-battery-full"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                            class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pl-sm-0">
+                        <img src="/static/front/images/member/谢诗婕2.jpg" alt=" " class="img-fluid img-thumbnail"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row agile_banner_bottom_grids">
+
+            <div class="col-xl-6 agile_banner_bottom_grid">
+                <div class="row">
+                    <div
+                            class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pr-sm-0">
+                        <img src="/static/front/images/member/池路通.jpg" alt=" " class="img-fluid img-thumbnail"/>
+                    </div>
+                    <div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos px-sm-0">
+                        <div class="agent-text-w3ls p-4">
+                            <h3>池路通</h3>
+                            <p class="mt-2 mb-3">硕士研究生</p>
+                            <div class="w3ls-agent-info border-top pt-4 mb-4">
+                                <ul>
+                                    <li class="text-dark">
+                                        <i class="fas fa-map-marker mr-2"></i> 南京农业大学
+                                    </li>
+                                    <li class="text-dark my-3">
+                                        <i class="fab fa-angellist mr-2"></i> 研究兴趣：图像处理
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope mr-2"></i>
+                                        <a href="mailto:info@example.com" class="text-dark">clt@stu.njau.edu.cn</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="social-bnr-agileits">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                    <li class="mx-3">
+                                        <a href="#" class="text-dark">
+                                            <i class="fab fa-weixin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-battery-full"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-6 agile_banner_bottom_grid mt-xl-0 mt-4">
+                <div class="row">
+                    <div
+                            class="col-xl-5 col-lg-3 col-md-4 col-sm-5 w3layouts_banner_bottom_grid text-sm-left text-center pr-sm-0">
+                        <img src="/static/front/images/member/匿名图片.jpg" style="width: 223.5px;height:310.97px;" alt=" "
+                             class="img-fluid img-thumbnail"/>
+                    </div>
+                    <div class="col-xl-7 col-lg-9 col-md-8 col-sm-7 w3layouts_banner_bottom_grid_pos px-sm-0">
+                        <div class="agent-text-w3ls p-4">
+                            <h3>尹涛</h3>
+                            <p class="mt-2 mb-3">本科生</p>
+                            <div class="w3ls-agent-info border-top pt-4 mb-4">
+                                <ul>
+                                    <li class="text-dark">
+                                        <i class="fas fa-map-marker mr-2"></i> 南京农业大学
+                                    </li>
+                                    <li class="text-dark my-3">
+                                        <i class="fab fa-angellist mr-2"></i> 研究兴趣：机器学习
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope mr-2"></i>
+                                        <a href="mailto:info@example.com" class="text-dark">1789111415@qq.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="social-bnr-agileits">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                    <li class="mx-3">
+                                        <a href="#" class="text-dark">
+                                            <i class="fab fa-weixin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-battery-full"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- footer top -->
+<br><br><br>
+<div class="middle-content py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <div class="row">
+            <div class="col-lg-6 left-middle-wthree">
+                <h4 class="text-white font-weight-bold text-uppercase">CDSIC-NJAU</h4>
+                <p class="mt-3">欢迎你的加入!</p>
+            </div>
+            <div class="col-lg-6 left-middle-wthree mt-lg-0 mt-4">
+                <h4 class="font-weight-bold se-agilem">联系我们</h4>
+                <p class="mt-3">
+                    <i class="fas fa-phone mr-3 text-white"></i>+86 25 84395042
+                </p>
+            </div>
+        </div>
+        <!-- <div class="img-calling">
+            <img src="images/1.png" alt="" class="img-fluid">
+        </div> -->
+    </div>
+</div>
+<!-- footer top -->
+
+<!-- footer -->
+<footer>
+    <div class="w3ls-footer-grids py-5">
+        <div class="container py-xl-5 py-lg-3">
+            <div class="row">
+                <div class="col-lg-8 col-md-9 w3l-footer">
+                    <!-- footer logo -->
+                    <h2 class="mb-3">
+                        <a href="index.html">
+                            <img src="/static/front/images/logo/logo1.png" style="width: 55%;" alt="">
+                        </a>
+                    </h2>
+                    <!-- //footer logo -->
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;本团队现与美国维克森林大学、德克萨斯大学、奥克兰大学、里海大学、新加坡国立大学和浙江大学的多个优秀团队建立了合作关系；课题组将每年选派老师或研究生出国访学。欢迎具有相关研究背景的海内外学者申请副教授、青年研究员、讲师，加盟我们的团队。
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;大数据智能计算研究中心（筹）经过近 1 年的快速发展，已吸纳了优秀学者共 15 人，包括副教授和讲师共 3 人，博士和硕士研究生共 8
+                        人，本科生 3
+                        人。热忱欢迎数学（信息与计算科学、应用数学、统计学）、计算机（机器学习、计算机视觉、数据挖掘）、自动化（复杂系统建模与计算智能、生物特征识别）、生物信息与系统生物学等专业或方向的学生报考（申请）博士生、硕士生。也欢迎本校在读的优秀本科生加盟团队参加项目实训！
+                    </p>
+                </div>
+                <!-- button -->
+                <div class="col-lg-4 col-md-3 w3l-footer text-md-right text-center my-md-0 my-4">
+                    <a href="#" class="onclick_demo1 w3ls-button2 float-md-right text-white mt-md-5 mt-2">联系我们</a>
+                </div>
+                <!-- //button -->
+            </div>
+            <div class="row border-top mt-4 pt-lg-4 pt-3 text-lg-left text-center">
+                <!-- copyright -->
+                <p class="col-lg-8 copy-right-grids mt-lg-1">Copyright &copy; 2021.CDSIC-NJAU All rights
+                    reserved.
+                </p>
+                <!-- //copyright -->
+                <!-- social icons -->
+                <div class="col-lg-4 w3social-icons text-lg-right text-center mt-lg-0 mt-3">
+                    <ul>
+                        <li>
+                            <a href="#" class="rounded-circle">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="px-2">
+                            <a href="#" class="rounded-circle">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="rounded-circle">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="pl-2">
+                            <a href="#" class="rounded-circle">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //social icons -->
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- //footer -->
+
+
+<!-- Js files -->
+<!-- Jquery -->
+<script src="/static/front/js/jquery-2.2.3.min.js"></script>
+<!-- //Jquery -->
+
+<!-- menu -->
+<script src="/static/front/js/menu.js"></script>
+<!-- //menu -->
+
+<!-- responsiveslides -->
+<script src="/static/front/js/responsiveslides.min.js"></script>
+<script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+        // Slideshow 4
+        $("#slider3").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: false,
+            speed: 500,
+            namespace: "callbacks",
+            before: function () {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+    });
+</script>
+<!-- //responsiveslides -->
+
+<!-- search-bar -->
+<script src="/static/front/js/main.js"></script>
+<!-- //search-ba r-->
+
+<!-- flexSlider (for testimonials) -->
+<link rel="stylesheet" href="/static/front/css/flexslider.css" type="text/css" media="screen" property=""/>
+<script defer src="/static/front/js/jquery.flexslider.js"></script>
+<script>
+    $(window).load(function () {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            start: function (slider) {
+                $('body').removeClass('loading');
+            }
+        });
+    });
+</script>
+<!-- //flexSlider (for testimonials) -->
+
+<script src="/static/front/js/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+<!-- pop-up-box -->
+<script src="/static/front/js/jquery.magnific-popup.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
+            fixedContentPos: false,
+            fixedBgPos: true,
+            overflowY: 'auto',
+            closeBtnInside: true,
+            preloader: false,
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
+
+    });
+</script>
+
+<script>
+
+    $(".onclick_demo1").bind("click", function () {
+        alert("该功能暂未开放!");
+    })
+</script>
+<!-- //pop-up-box -->
+
+<!-- stats numscroller-js-file -->
+<script src="/static/front/js/numscroller-1.0.js"></script>
+<!-- //stats numscroller-js-file -->
+
+<!-- smooth scrolling -->
+<script src="/static/front/js/SmoothScroll.min.js"></script>
+<!-- //smooth scrolling -->
+
+<!-- move-top -->
+<script src="/static/front/js/move-top.js"></script>
+<!-- easing -->
+<script src="/static/front/js/easing.js"></script>
+<!--  necessary snippets for few javascript files -->
+<script src="/static/front/js/land_mark.js"></script>
+
+<script src="/static/front/js/bootstrap.js"></script>
+<!-- Necessary-JavaScript-File-For-Bootstrap -->
+<!-- //Js files -->
 
 </body>
 
