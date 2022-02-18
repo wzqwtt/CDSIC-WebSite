@@ -20,6 +20,18 @@
     <dependencies>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- 模板引擎 thymeleaf -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <dependency>
             <!-- 每一个微服务公共的依赖（bean，utils）都放在这里 -->
             <groupId>com.cdsic</groupId>
             <artifactId>cdsic-common</artifactId>

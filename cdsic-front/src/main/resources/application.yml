@@ -13,6 +13,9 @@ spring:
 
   application:
     name: cdsic-front
+  # 关闭thymeleaf缓存
+  thymeleaf:
+    cache: false
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
