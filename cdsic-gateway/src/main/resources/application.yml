@@ -25,6 +25,13 @@ spring:
             - Path=/api/**
           filters:
             - RewritePath=/api/(?<segment>.*),/renren-fast/$\{segment}
+
+        - id: cdsic_host_route
+          uri: lb://cdsic-front
+          predicates:
+            # TODO 这里需要改为域名
+            - Host=192.168.10.100
+
   application:
     name: cdsic-gateway
 server:
