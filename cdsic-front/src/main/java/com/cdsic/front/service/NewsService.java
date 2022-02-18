@@ -23,5 +23,11 @@ public interface NewsService extends IService<NewsEntity> {
      * @return
      */
     List<NewsEntity> getRecentNews();
+
+    /**
+     * 查出所有新闻，按照时间排序
+     * @return
+     */
+    List<NewsEntity> getNewsOrderDescByDate();
 }
 

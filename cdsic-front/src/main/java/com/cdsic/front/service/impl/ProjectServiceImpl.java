@@ -35,4 +35,11 @@ public class ProjectServiceImpl extends ServiceImpl<ProjectDao, ProjectEntity> i
         return projectEntities;
     }
 
+    @Override
+    public List<ProjectEntity> getRecentProject() {
+        List<ProjectEntity> projectEntities = baseMapper.selectList(new QueryWrapper<ProjectEntity>().orderByDesc("pdate").last("limit 6"));
+        return projectEntities;
+
+    }
+
 }

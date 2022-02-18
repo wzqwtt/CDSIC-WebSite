@@ -35,4 +35,11 @@ public class NewsServiceImpl extends ServiceImpl<NewsDao, NewsEntity> implements
         return newsEntityList;
     }
 
+    @Override
+    public List<NewsEntity> getNewsOrderDescByDate() {
+        List<NewsEntity> newsEntities = baseMapper.selectList(new QueryWrapper<NewsEntity>().orderByDesc("ndate"));
+        return newsEntities;
+
+    }
+
 }

@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -18,6 +19,14 @@ class CdsicFrontApplicationTests {
 
     @Autowired
     NewsService newsService;
+
+    @Test
+    void getNewsTest(){
+        List<NewsEntity> NewsEntities = newsService.getNewsOrderDescByDate();
+        for (NewsEntity n : NewsEntities) {
+            System.out.println(n.getNdate() + " " + n.getNtitle());
+        }
+    }
 
     @Test
     void getRecentNewsTest() {

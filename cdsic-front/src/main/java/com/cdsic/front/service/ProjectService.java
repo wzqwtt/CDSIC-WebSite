@@ -18,6 +18,16 @@ public interface ProjectService extends IService<ProjectEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
 
+    /**
+     * 获取在首页展示的Project
+     * @return
+     */
     List<ProjectEntity> getCarouselProject();
+
+    /**
+     * 获取最近的Project
+     * @return
+     */
+    List<ProjectEntity> getRecentProject();
 }
 
