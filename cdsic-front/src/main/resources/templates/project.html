@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="zxx"  xmlns:th="http://www.thymeleaf.org">
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>团队新闻</title>
+	<title>科研成果</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -51,7 +51,7 @@
 						<img src="/static/front/images/logo/logo1.png" style="width: 20%;height: auto;" alt="">
 						<!-- <span>CDSIC-NJAU</span> -->
 					</a>
-
+					<!--<img src="images/CDSIC_画板 1.png" />-->
 				</h1>
 			</div>
 			<!-- //logo -->
@@ -98,10 +98,10 @@
 							<a href="/index">首页</a>
 						</li>
 						<li class="list_item">
-							<a class="active" href="#">团队新闻</a>
+							<a href="/news">团队新闻</a>
 						</li>
 						<li class="list_item">
-							<a href="/project">科研成果</a>
+							<a class="active" href="#">科研成果</a>
 						</li>
 						<li class="list_item">
 							<a href="filed.html">研究方向</a>
@@ -166,7 +166,7 @@
 							<a href="/index">Home</a>
 							<i>|</i>
 						</li>
-						<li>NEWS</li>
+						<li>Scientific research results</li>
 					</ul>
 				</div>
 			</div>
@@ -178,25 +178,34 @@
 	<div class="blog-w3l py-5">
 		<div class="container py-xl-5 py-lg-3">
 			<div class="title text-center mb-sm-5 mb-4">
-				<h3 class="text-dark ">团队新闻</h3>
-				<!-- <p>该页面展示了计智伟教授团队的最新科研成果</p> -->
+				<h3 class="text-dark ">科研成果</h3>
+				<p>该页面展示了计智伟教授团队的最新科研成果</p>
 			</div>
 			<div class="row blog-content">
+				<style>
+					a{
+						color:black
+					}
+				</style>
 				<!-- left side -->
 				<div class="col-lg-8 blog_section">
-					<div class="card my-4" th:each="neww:${news}">
-						<div class="card-body ">
-							<h5 class="card-title">
-								<a href="news3.html" class="text-dark" th:text="'['+${#dates.format(neww.ndate,'yyyy-MM-dd')}+'] ' + ${neww.ntitle}" >[2021-12-15] 高欣教授为课题做作线上报告 &nbsp; </a>
-								&nbsp; <a th:if="${#dates.format(neww.ndate,'yyyy-MM-dd') ge #dates.format(time, 'yyyy-MM-dd')}"><span style="color: red;"> new!!</span></a>
-							</h5>
-							<p class="card-text" th:text="${neww.nsynopsis}">12月15日晚，高欣教授应邀参加题为肺癌淋巴结转移智能诊断模型构建的报告，报告的主要内容是探究深度学习在肺癌淋巴结转移诊断中的应用，提出了采用图像融合、特征融合以及决策融合的方式改进现有算法，获得了比现有方法更优的性能，并采用热图可视化病灶区域，为医生的临床诊断提供参考，达到辅助医生诊断的目的。
-							</p>
+
+					<div th:each="pro:${project}">
+						<h3 th:text="${pro.year} + '年'">2021年</h3>
+						<div style="margin-left: 20px;">
+							<ul class="list-unstyled" style="font-size: 20px;">
+								<li style="margin: 12px;" th:each="singlePro,status:${pro.projectEntities}">
+									<a href="single1.html" th:text="${status.index+1} + '、' + ${singlePro.ptitle}">1、阿尔兹海默病中TREM2调控机制的时序特性</a>
+								</li>
+								<li style="margin: 12px;">......</li>
+							</ul>
 						</div>
+						<hr>
 					</div>
 
 
-					
+
+
 					<nav aria-label="Page navigation example">
 						<ul class="pagination mt-5">
 							<li class="page-item disabled">
@@ -224,7 +233,7 @@
 				<!-- right side -->
 				<div class="col-lg-4 event-right mt-lg-0 mt-sm-5 mt-4">
 					<div class="event-right1">
-						<div class="search1 my-4">
+						<div class="search1">
 							<!-- <form class="form-inline" action="#" method="post"> -->
 							<form class="form-inline" action="#">
 								<input class="form-control rounded-0 mr-sm-2" type="search" placeholder="Search Here"
@@ -239,26 +248,28 @@
 							</form>
 						</div>
 						<div class="categories my-4 p-4 border">
-							<a href="project.html">	<h3 class="blog-title text-dark">科研成果</h3> </a>
+							<a href="/news"> <h3 class="blog-title text-dark">团队新闻</h3></a>
 							<ul>
-								<li class="mt-3" th:each="pro:${project}">
-									<i class="fas fa-check mr-2"></i>
-									<a href="single1.html" th:text="${#strings.abbreviate(pro.ptitle,19)}">一种深度聚类算法用于植物病害诊断识别</a>
+								<li class="mt-3" th:each="neww:${news}">
+									<!-- <i class="fas fa-angle-right" style="font-size: 20px;"></i>&nbsp; -->
+									<a href="news3.html" style="font-size: 16px;" th:text=" '[' + ${#dates.format(neww.ndate,'MM-dd')} + '] ' + ${#strings.abbreviate(neww.ntitle,17)}">[12-15] 高欣教授为课题组做作线上报告</a>
 								</li>
 							</ul>
 						</div>
 						<div class="posts p-4 border">
-							<a href="filed.html"><h3 class="blog-title text-dark">研究方向</h3></a>
+							<a href="filed.html">
+								<h3 class="blog-title text-dark">研究方向</h3>
+							</a>
 							<div class="posts-grids">
 								<div class="row posts-grid mt-4">
 									<div class="col-lg-4 col-md-3 col-4 posts-grid-left pr-0">
-										<a href="#">
+										<a href="single.html">
 											<img src="/static/front/images/e1.jpg" alt=" " class="img-fluid" />
 										</a>
 									</div>
 									<div class="col-lg-8 col-md-7 col-8 posts-grid-right mt-lg-0 mt-4">
 										<h4>
-											<a href="#" class="text-dark">Sed ut perspiciatis unde omni</a>
+											<a href="single.html" class="text-dark">Sed ut perspiciatis unde omni</a>
 										</h4>
 										<ul class="wthree_blog_events_list mt-2">
 											<li class="mr-2 text-dark">
@@ -273,13 +284,13 @@
 								</div>
 								<div class="row posts-grid mt-4">
 									<div class="col-lg-4 col-md-3 col-4 posts-grid-left pr-0">
-										<a href="#">
+										<a href="single.html">
 											<img src="/static/front/images/e2.jpg" alt=" " class="img-fluid" />
 										</a>
 									</div>
 									<div class="col-lg-8 col-md-7 col-8 posts-grid-right mt-lg-0 mt-4">
 										<h4>
-											<a href="#" class="text-dark">Sed ut perspiciatis unde omni</a>
+											<a href="single.html" class="text-dark">Sed ut perspiciatis unde omni</a>
 										</h4>
 										<ul class="wthree_blog_events_list mt-2">
 											<li class="mr-2 text-dark">
@@ -294,7 +305,7 @@
 								</div>
 								<div class="row posts-grid mt-4">
 									<div class="col-lg-4 col-md-3 col-4 posts-grid-left pr-0">
-										<a href="#">
+										<a href="single.html">
 											<img src="/static/front/images/e3.jpg" alt=" " class="img-fluid" />
 										</a>
 									</div>
@@ -443,17 +454,6 @@
 				}, 1000);
 			});
 		});
-	</script>
-	<script>
-		function DateDiff(sDate1, sDate2) {  //sDate1和sDate2是yyyy-MM-dd格式
-			var aDate, oDate1, oDate2, iDays;
-			aDate = sDate1.split("-");
-			oDate1 = new Date(aDate[1] + '-' + aDate[2] + '-' + aDate[0]);  //转换为yyyy-MM-dd格式
-			aDate = sDate2.split("-");
-			oDate2 = new Date(aDate[1] + '-' + aDate[2] + '-' + aDate[0]);
-			iDays = parseInt(Math.abs(oDate1 - oDate2) / 1000 / 60 / 60 / 24); //把相差的毫秒数转换为天数
-			return iDays;  //返回相差天数
-		}
 	</script>
 	<!-- start-smoth-scrolling -->
 

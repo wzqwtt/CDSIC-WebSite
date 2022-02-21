@@ -30,8 +30,8 @@ public class NewsServiceImpl extends ServiceImpl<NewsDao, NewsEntity> implements
     }
 
     @Override
-    public List<NewsEntity> getRecentNews() {
-        List<NewsEntity> newsEntityList = baseMapper.selectList(new QueryWrapper<NewsEntity>().orderByDesc("ndate").last("limit 5"));
+    public List<NewsEntity> getRecentNews(int n) {
+        List<NewsEntity> newsEntityList = baseMapper.selectList(new QueryWrapper<NewsEntity>().orderByDesc("ndate").last("limit " + n));
         return newsEntityList;
     }
 
@@ -39,7 +39,6 @@ public class NewsServiceImpl extends ServiceImpl<NewsDao, NewsEntity> implements
     public List<NewsEntity> getNewsOrderDescByDate() {
         List<NewsEntity> newsEntities = baseMapper.selectList(new QueryWrapper<NewsEntity>().orderByDesc("ndate"));
         return newsEntities;
-
     }
 
 }

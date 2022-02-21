@@ -22,7 +22,7 @@ public class NewsPageController {
     @Autowired
     ProjectService projectService;
 
-    @GetMapping("/news")
+    @GetMapping({"/news","/news.html"})
     public String newsPage(Model model) {
 
         // 获取所有新闻
@@ -35,8 +35,8 @@ public class NewsPageController {
         Date startDate = DateUtils.addDays(now, -30);
         model.addAttribute("time", startDate);
 
-        // 获取最近六条新闻数据
-        List<ProjectEntity> projectEntities = projectService.getRecentProject();
+        // 获取最近六条Project数据
+        List<ProjectEntity> projectEntities = projectService.getRecentProject(6);
         model.addAttribute("project", projectEntities);
 
         return "news";

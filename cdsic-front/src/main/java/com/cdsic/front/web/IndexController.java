@@ -21,10 +21,10 @@ public class IndexController {
     ProjectService projectService;
 
 
-    @GetMapping({"/", "/index.html"})
+    @GetMapping({"/", "/index", "/index.html"})
     public String indexPage(Model model) {
         // 查出团队新闻【c_news】日期最晚的5条记录
-        List<NewsEntity> NewsEntities = newsService.getRecentNews();
+        List<NewsEntity> NewsEntities = newsService.getRecentNews(5);
         model.addAttribute("news", NewsEntities);
         // 查出轮播图需要展示的项目【c_project】
         List<ProjectEntity> projectEntities = projectService.getCarouselProject();

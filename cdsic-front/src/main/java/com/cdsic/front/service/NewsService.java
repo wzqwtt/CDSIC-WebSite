@@ -19,10 +19,10 @@ public interface NewsService extends IService<NewsEntity> {
     PageUtils queryPage(Map<String, Object> params);
 
     /**
-     * 查出最近的5条新闻 按照时间排序
+     * 查出最近的n条新闻 按照时间排序
      * @return
      */
-    List<NewsEntity> getRecentNews();
+    List<NewsEntity> getRecentNews(int n);
 
     /**
      * 查出所有新闻，按照时间排序
