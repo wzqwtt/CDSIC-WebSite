@@ -29,5 +29,12 @@ public interface NewsService extends IService<NewsEntity> {
      * @return
      */
     List<NewsEntity> getNewsOrderDescByDate();
+
+    /**
+     * 获取news表id=nid的数据
+     * @param nid
+     * @return
+     */
+    NewsEntity getNewsById(Integer nid);
 }
 

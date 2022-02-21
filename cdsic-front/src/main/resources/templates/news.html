@@ -187,14 +187,13 @@
 					<div class="card my-4" th:each="neww:${news}">
 						<div class="card-body ">
 							<h5 class="card-title">
-								<a href="news3.html" class="text-dark" th:text="'['+${#dates.format(neww.ndate,'yyyy-MM-dd')}+'] ' + ${neww.ntitle}" >[2021-12-15] 高欣教授为课题做作线上报告 &nbsp; </a>
+								<a th:href="'/news/'+${neww.nid}" class="text-dark" th:text="'['+${#dates.format(neww.ndate,'yyyy-MM-dd')}+'] ' + ${neww.ntitle}" >[2021-12-15] 高欣教授为课题做作线上报告 &nbsp; </a>
 								&nbsp; <a th:if="${#dates.format(neww.ndate,'yyyy-MM-dd') ge #dates.format(time, 'yyyy-MM-dd')}"><span style="color: red;"> new!!</span></a>
 							</h5>
 							<p class="card-text" th:text="${neww.nsynopsis}">12月15日晚，高欣教授应邀参加题为肺癌淋巴结转移智能诊断模型构建的报告，报告的主要内容是探究深度学习在肺癌淋巴结转移诊断中的应用，提出了采用图像融合、特征融合以及决策融合的方式改进现有算法，获得了比现有方法更优的性能，并采用热图可视化病灶区域，为医生的临床诊断提供参考，达到辅助医生诊断的目的。
 							</p>
 						</div>
 					</div>
-
 
 					
 					<nav aria-label="Page navigation example">

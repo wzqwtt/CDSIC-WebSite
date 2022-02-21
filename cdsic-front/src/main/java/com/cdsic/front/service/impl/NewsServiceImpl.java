@@ -41,4 +41,9 @@ public class NewsServiceImpl extends ServiceImpl<NewsDao, NewsEntity> implements
         return newsEntities;
     }
 
+    @Override
+    public NewsEntity getNewsById(Integer nid) {
+        return baseMapper.selectById(nid);
+    }
+
 }

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.Date;
 import java.util.List;
@@ -42,9 +43,18 @@ public class NewsPageController {
         return "news";
     }
 
-//    @GetMapping("/news/")
-//    public String singleNewsPage(Model model) {
-//
-//    }
+    @GetMapping("/news/{nid}")
+    public String singleNewsPage(@PathVariable(value = "nid") Integer nid, Model model) {
+
+        // 获取id为nid的新闻
+        NewsEntity newsEntity = newsService.getNewsById(nid);
+        model.addAttribute("news",newsEntity);
+
+        // 获取最近六条Project数据
+        List<ProjectEntity> projectEntities = projectService.getRecentProject(6);
+        model.addAttribute("project", projectEntities);
+
+        return "singleNew";
+    }
 
 }
