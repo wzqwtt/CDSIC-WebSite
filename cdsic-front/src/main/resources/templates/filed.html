@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+<html lang="zxx">
 
 <head>
-	<title>科研成果</title>
+	<title>团队新闻</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="/static/front/css/fontawesome-all.css">
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //Custom-Files -->
-
+	<link rel="stylesheet" href="/static/front/css/swiper-bundle.min.css">
 	<!-- Web-Fonts -->
 	<link
 		href="http://fonts.googleapis.com/css?family=Exo:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese"
@@ -37,6 +37,50 @@
 	<!-- //Web-Fonts -->
 	<!-- //Web-Fonts -->
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<style>
+		html,
+		body {
+			position: relative;
+			height: 100%;
+		}
+
+		body {
+			background: #eee;
+			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			color: #000;
+			margin: 0;
+			padding: 0;
+		}
+
+		.swiper {
+			width: 1600px;
+			height: 1000px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.swiper-slide {
+			text-align: center;
+			font-size: 18px;
+			background: #fff;
+			/* height: calc((100% - 30px) / 2); */
+			height: 500px;
+			/* Center slide text vertically */
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+	</style>
 </head>
 
 <body>
@@ -51,7 +95,7 @@
 						<img src="/static/front/images/logo/logo1.png" style="width: 20%;height: auto;" alt="">
 						<!-- <span>CDSIC-NJAU</span> -->
 					</a>
-					<!--<img src="images/CDSIC_画板 1.png" />-->
+
 				</h1>
 			</div>
 			<!-- //logo -->
@@ -101,10 +145,10 @@
 							<a href="/news">团队新闻</a>
 						</li>
 						<li class="list_item">
-							<a class="active" href="#">科研成果</a>
+							<a href="/project">科研成果</a>
 						</li>
 						<li class="list_item">
-							<a href="/filed">研究方向</a>
+							<a class="active" href="#">研究方向</a>
 						</li>
 						<li class="list_item">
 							<a class="onclick_demo" href="#">客座教授</a>
@@ -112,7 +156,6 @@
 						<li class="list_item">
 							<a class="onclick_demo" href="#">联系我们</a>
 						</li>
-
 						<script>
 
 							$(".onclick_demo").bind("click", function () {
@@ -149,7 +192,7 @@
 							<a href="/index">Home</a>
 							<i>|</i>
 						</li>
-						<li>Scientific research results</li>
+						<li>PROJECT</li>
 					</ul>
 				</div>
 			</div>
@@ -159,164 +202,105 @@
 
 	<!-- blog -->
 	<div class="blog-w3l py-5">
-		<div class="container py-xl-5 py-lg-3">
+		<div class="container ">
 			<div class="title text-center mb-sm-5 mb-4">
-				<h3 class="text-dark ">科研成果</h3>
-				<p>该页面展示了计智伟教授团队的最新科研成果</p>
+				<h3 class="text-dark ">研究方向</h3>
+				<p>该页面展示了计智伟教授团队正在进展的研究方向</p>
 			</div>
-			<div class="row blog-content">
-				<style>
-					a{
-						color:black
-					}
-				</style>
-				<!-- left side -->
-				<div class="col-lg-8 blog_section">
 
-					<div th:each="pro:${project}">
-						<h3 th:text="${pro.year} + '年'">2021年</h3>
-						<div style="margin-left: 20px;">
-							<ul class="list-unstyled" style="font-size: 20px;">
-								<li style="margin: 12px;" th:each="singlePro,status:${pro.projectEntities}">
-									<a th:href="'/project/'+${singlePro.pid}" th:text="${status.index+1} + '、' + ${singlePro.ptitle}">1、阿尔兹海默病中TREM2调控机制的时序特性</a>
-								</li>
-								<li style="margin: 12px;">......</li>
-							</ul>
-						</div>
-						<hr>
-					</div>
-
-
-
-
-					<nav aria-label="Page navigation example">
-						<ul class="pagination mt-5">
-							<li class="page-item disabled">
-								<a class="page-link" href="#" tabindex="-1">Previous</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="#">1</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="#">2</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="#">3</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="#">Next</a>
-							</li>
-						</ul>
-
-					</nav>
-					<!-- //left side -->
-				</div>
-
-
-				<!-- right side -->
-				<div class="col-lg-4 event-right mt-lg-0 mt-sm-5 mt-4">
-					<div class="event-right1">
-						<div class="search1">
-							<!-- <form class="form-inline" action="#" method="post"> -->
-							<form class="form-inline" action="#">
-								<input class="form-control rounded-0 mr-sm-2" type="search" placeholder="Search Here"
-									aria-label="Search" required>
-								<!-- <button class="btn btn-outline-success rounded-0 mt-3" type="submit">Search</button> -->
-								<button class="btn btn-outline-success mt-3" onclick="OnclickDemo()">Search</button>
-								<script>
-									function OnclickDemo() {
-										alert("该功能正在努力开发中！");
-									}
-								</script>
-							</form>
-						</div>
-						<div class="categories my-4 p-4 border">
-							<a href="/news"> <h3 class="blog-title text-dark">团队新闻</h3></a>
-							<ul>
-								<li class="mt-3" th:each="neww:${news}">
-									<!-- <i class="fas fa-angle-right" style="font-size: 20px;"></i>&nbsp; -->
-									<a th:href="'/news/'+${neww.nid}" style="font-size: 16px;" th:text=" '[' + ${#dates.format(neww.ndate,'MM-dd')} + '] ' + ${#strings.abbreviate(neww.ntitle,17)}">[12-15] 高欣教授为课题组做作线上报告</a>
-								</li>
-							</ul>
-						</div>
-						<div class="posts p-4 border">
-							<a href="filed.html">
-								<h3 class="blog-title text-dark">研究方向</h3>
-							</a>
-							<div class="posts-grids">
-								<div class="row posts-grid mt-4">
-									<div class="col-lg-4 col-md-3 col-4 posts-grid-left pr-0">
-										<a href="single.html">
-											<img src="/static/front/images/e1.jpg" alt=" " class="img-fluid" />
-										</a>
-									</div>
-									<div class="col-lg-8 col-md-7 col-8 posts-grid-right mt-lg-0 mt-4">
-										<h4>
-											<a href="single.html" class="text-dark">Sed ut perspiciatis unde omni</a>
-										</h4>
-										<ul class="wthree_blog_events_list mt-2">
-											<li class="mr-2 text-dark">
-												<i class="fa fa-calendar mr-2" aria-hidden="true"></i>15/05/18
-											</li>
-											<li>
-												<i class="fa fa-user" aria-hidden="true"></i>
-												<a href="single.html" class="text-dark ml-2">Admin</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="row posts-grid mt-4">
-									<div class="col-lg-4 col-md-3 col-4 posts-grid-left pr-0">
-										<a href="single.html">
-											<img src="/static/front/images/e2.jpg" alt=" " class="img-fluid" />
-										</a>
-									</div>
-									<div class="col-lg-8 col-md-7 col-8 posts-grid-right mt-lg-0 mt-4">
-										<h4>
-											<a href="single.html" class="text-dark">Sed ut perspiciatis unde omni</a>
-										</h4>
-										<ul class="wthree_blog_events_list mt-2">
-											<li class="mr-2 text-dark">
-												<i class="fa fa-calendar mr-2" aria-hidden="true"></i>23/05/18
-											</li>
-											<li>
-												<i class="fa fa-user" aria-hidden="true"></i>
-												<a href="#" class="text-dark ml-2">Admin</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="row posts-grid mt-4">
-									<div class="col-lg-4 col-md-3 col-4 posts-grid-left pr-0">
-										<a href="single.html">
-											<img src="/static/front/images/e3.jpg" alt=" " class="img-fluid" />
-										</a>
-									</div>
-									<div class="col-lg-8 col-md-7 col-8 posts-grid-right mt-lg-0 mt-4">
-										<h4>
-											<a href="#" class="text-dark">Sed ut perspiciatis unde omni</a>
-										</h4>
-										<ul class="wthree_blog_events_list mt-2">
-											<li class="mr-2 text-dark">
-												<i class="fa fa-calendar mr-2" aria-hidden="true"></i>13/06/18
-											</li>
-											<li>
-												<i class="fa fa-user" aria-hidden="true"></i>
-												<a href="#" class="text-dark ml-2">Admin</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-				<!-- //right side -->
-			</div>
 		</div>
 	</div>
-	<!-- //blog -->
+
+
+
+
+	<!-- 四大块 -->
+
+	<div class="container-fluid">
+		<div class="row">
+
+
+			<div class="col-md-2"></div>
+
+			<div class="col-md-4">
+
+				<div class="card">
+					<div class="card-body" style="height: 400px;">
+						<!-- <h5 class="card-title">
+							<a href="#" class="text-dark">[2021-11-20] 新闻标题1 &nbsp; <span style="color: red;">new!!</span> </a>
+						</h5>
+						<p class="card-text">新闻简介 test test test test test test test test test test test test test
+							test test test
+						</p> -->
+						
+						<!-- <h4>aaa</h4> -->
+
+					</div>
+				</div>
+			</div>
+			<!-- <div class="col-md-2"><br></div> -->
+
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body" style="height: 400px;">
+						<!-- <h5 class="card-title">
+							<a href="#" class="text-dark">[2021-11-20] 新闻标题1 &nbsp; <span style="color: red;">new!!</span> </a>
+						</h5>
+						<p class="card-text">新闻简介 test test test test test test test test test test test test test
+							test test test
+						</p> -->
+			
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-2"></div>
+			
+		</div>
+	</div>
+
+	<br><br>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2"></div>
+
+			<div class="col-md-4">
+
+				<div class="card">
+					<div class="card-body" style="height: 400px;">
+						<!-- <h5 class="card-title">
+							<a href="#" class="text-dark">[2021-11-20] 新闻标题1 &nbsp; <span style="color: red;">new!!</span> </a>
+						</h5>
+						<p class="card-text">新闻简介 test test test test test test test test test test test test test
+							test test test
+						</p> -->
+			
+					</div>
+				</div>
+			</div>
+			<!-- <div class="col-md-2"><br></div> -->
+
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body" style="height: 400px;">
+						<!-- <h5 class="card-title">
+							<a href="#" class="text-dark">[2021-11-20] 新闻标题1 &nbsp; <span style="color: red;">new!!</span> </a>
+						</h5>
+						<p class="card-text">新闻简介 test test test test test test test test test test test test test
+							test test test
+						</p> -->
+			
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+
+
+
+
 
 	<!-- footer top -->
 	<br><br><br>
@@ -439,6 +423,22 @@
 		});
 	</script>
 	<!-- start-smoth-scrolling -->
+	<script src="/static/front/js/swiper-bundle.min.js"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			slidesPerView: 3,
+			grid: {
+				rows: 2,
+			},
+			spaceBetween: 30,
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+		});
+	</script>
 
 	<!-- move-top -->
 	<script src="/static/front/js/move-top.js"></script>
