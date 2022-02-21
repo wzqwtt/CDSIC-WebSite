@@ -195,7 +195,7 @@
 						<div style="margin-left: 20px;">
 							<ul class="list-unstyled" style="font-size: 20px;">
 								<li style="margin: 12px;" th:each="singlePro,status:${pro.projectEntities}">
-									<a href="single1.html" th:text="${status.index+1} + '、' + ${singlePro.ptitle}">1、阿尔兹海默病中TREM2调控机制的时序特性</a>
+									<a th:href="'/project/'+${singlePro.pid}" th:text="${status.index+1} + '、' + ${singlePro.ptitle}">1、阿尔兹海默病中TREM2调控机制的时序特性</a>
 								</li>
 								<li style="margin: 12px;">......</li>
 							</ul>

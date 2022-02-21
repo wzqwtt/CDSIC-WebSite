@@ -36,5 +36,12 @@ public interface ProjectService extends IService<ProjectEntity> {
      * @return
      */
     List<ProjectByYearsEntity> getAllProjectByYear();
+
+    /**
+     * 获取id为pid的project
+     * @param pid
+     * @return
+     */
+    ProjectEntity getProjectById(Integer pid);
 }
 

@@ -203,7 +203,7 @@
 							<ul>
 								<li class="mt-3" th:each="pro:${project}">
 									<i class="fas fa-check mr-2"></i>
-									<a href="single1.html" th:text="${pro.ptitle}">一种深度聚类算法用于植物病害诊断识别</a>
+									<a th:href="'/project/'+${pro.pid}" th:text="${pro.ptitle}">一种深度聚类算法用于植物病害诊断识别</a>
 								</li>
 							</ul>
 						</div>

@@ -61,10 +61,15 @@ public class ProjectServiceImpl extends ServiceImpl<ProjectDao, ProjectEntity> i
         List<ProjectByYearsEntity> result = new ArrayList<>();
 
         for (Map.Entry<String, List<ProjectEntity>> entry : listMap.entrySet()) {
-            result.add(new ProjectByYearsEntity(entry.getKey(),entry.getValue()));
+            result.add(new ProjectByYearsEntity(entry.getKey(), entry.getValue()));
         }
 
         return result;
+    }
+
+    @Override
+    public ProjectEntity getProjectById(Integer pid) {
+        return baseMapper.selectById(pid);
     }
 
 }

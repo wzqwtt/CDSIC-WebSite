@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="zxx"  xmlns:th="http://www.thymeleaf.org">
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>团队新闻</title>
+	<title>科研成果</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
-	<meta name="keywords" content="" />
+	<meta name="keywords" content=""
+	/>
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -28,15 +29,12 @@
 	<!-- //Custom-Files -->
 
 	<!-- Web-Fonts -->
-	<link
-		href="http://fonts.googleapis.com/css?family=Exo:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese"
-		rel="stylesheet">
-	<link
-		href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-		rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Exo:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese"
+	    rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+	    rel="stylesheet">
 	<!-- //Web-Fonts -->
-	<!-- //Web-Fonts -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="/static/front/https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 
 <body>
@@ -51,7 +49,7 @@
 						<img src="/static/front/images/logo/logo1.png" style="width: 20%;height: auto;" alt="">
 						<!-- <span>CDSIC-NJAU</span> -->
 					</a>
-
+					<!--<img src="images/CDSIC_画板 1.png" />-->
 				</h1>
 			</div>
 			<!-- //logo -->
@@ -98,13 +96,13 @@
 							<a href="/index">首页</a>
 						</li>
 						<li class="list_item">
-							<a class="active" href="#">团队新闻</a>
+							<a href="/news">团队新闻</a>
 						</li>
 						<li class="list_item">
-							<a href="/project">科研成果</a>
+							<a class="active" href="/project">科研成果</a>
 						</li>
 						<li class="list_item">
-							<a href="filed.html">研究方向</a>
+							<a href="/filed">研究方向</a>
 						</li>
 						<li class="list_item">
 							<a class="onclick_demo" href="#">客座教授</a>
@@ -112,25 +110,7 @@
 						<li class="list_item">
 							<a class="onclick_demo" href="#">联系我们</a>
 						</li>
-						<!-- <li class="list_item">
-							<a class="onclick_demo" href="#">404 Error Page</a>
-						</li>
-						<li class="list_item">
-							<a class="onclick_demo" href="#">Blog</a>
-						</li>
-						<li class="list_item">
-							<a class="onclick_demo" href="#">Single Page</a>
-						</li>
-						<li class="list_item">
-							<a class="onclick_demo" href="#">Contact Us</a>
-						</li> -->
 						<script>
-							// $(".onclick_demo").onclick(function(){
-
-							// 	console.log("1");
-							// 	alert("该页面正在开发中,目前不开放!");
-
-							// });
 
 							$(".onclick_demo").bind("click", function () {
 								console.log("1");
@@ -166,7 +146,7 @@
 							<a href="/index">Home</a>
 							<i>|</i>
 						</li>
-						<li>NEWS</li>
+						<li>Scientific research results</li>
 					</ul>
 				</div>
 			</div>
@@ -174,56 +154,68 @@
 		<!-- //page -->
 	</div>
 
-	<!-- blog -->
-	<div class="blog-w3l py-5">
+	<!-- single -->
+	<div class="single-w3l py-5">
 		<div class="container py-xl-5 py-lg-3">
 			<div class="title text-center mb-sm-5 mb-4">
-				<h3 class="text-dark ">团队新闻</h3>
-				<!-- <p>该页面展示了计智伟教授团队的最新科研成果</p> -->
+				<h3 class="text-dark" th:text="${project.ptitle}">一种深度聚类算法用于植物病害诊断识别</h3>
+				<br>
+				<!-- <p>计智伟教授团队利用系统生物学方法揭示阿尔兹海默病中TREM2调控机制的时序特性</p> -->
 			</div>
-			<div class="row blog-content">
+			<div class="row inner_sec_info">
 				<!-- left side -->
-				<div class="col-lg-8 blog_section">
-					<div class="card my-4" th:each="neww:${news}">
-						<div class="card-body ">
-							<h5 class="card-title">
-								<a th:href="'/news/'+${neww.nid}" class="text-dark" th:text="'['+${#dates.format(neww.ndate,'yyyy-MM-dd')}+'] ' + ${neww.ntitle}" >[2021-12-15] 高欣教授为课题做作线上报告 &nbsp; </a>
-								&nbsp; <a th:if="${#dates.format(neww.ndate,'yyyy-MM-dd') ge #dates.format(time, 'yyyy-MM-dd')}"><span style="color: red;"> new!!</span></a>
-							</h5>
-							<p class="card-text" th:text="${neww.nsynopsis}">12月15日晚，高欣教授应邀参加题为肺癌淋巴结转移智能诊断模型构建的报告，报告的主要内容是探究深度学习在肺癌淋巴结转移诊断中的应用，提出了采用图像融合、特征融合以及决策融合的方式改进现有算法，获得了比现有方法更优的性能，并采用热图可视化病灶区域，为医生的临床诊断提供参考，达到辅助医生诊断的目的。
-							</p>
-						</div>
+				<div class="col-lg-8 single-left">
+					<div class="single-left1">
+						<img th:src="${project.pimage}" alt=" " class="img-fluid" />
+						<h6 class="blog-first text-dark text-center my-4">
+							<ul class="blog_list my-3">
+								<li><i class="fas fa-calendar-alt mr-2"></i><span th:text="${#dates.format(project.pdate,'MM月dd,yyyy年')}"> 月 日, 年 </span> </li>
+								<li class="mx-3">
+									<i class="far fa-user mr-2"></i>
+									<span th:text="${project.pperson}">计智伟教授，夏菲</span>
+								</li>
+								<li>
+									<i class="far fa-comments mr-2"></i>
+									期刊：《<span th:text="${project.pplatform}">Frontiers in Plant Science</span>》
+								</li>
+							</ul>
+						</h6>
+						
+						<h5 class="card-title">
+							<a href="#" class="text-dark" th:text="${project.ptitle}">一种深度聚类算法用于植物病害诊断识别</a>
+						</h5>
+						<p th:text="${project.pcontent}">这里可以是摘要的一段话 In consectetur, elit in scelerisque malesuada, tellus leo viverra massa, nec malesuada turpis lectus ac urna. Suspendisse
+							ut neque orci. Phasellus tellus diam, pulvinar sit amet elit sit amet, fermentum viverra eros. Praesent neque purus,
+							rhoncus nec nibh non, mollis sodales odio. Nullam facilisis diam non magna porta luctus. Aenean facilisis erat posuere
+							erat ornare ultrices. Aliquam ac arcu interdum, dapibus nibh convallis, semper augue.
+							<i class="my-3 font-weight-bold">重点可用绿色标记……Nunc a urna turpis. Aenean vestibulum elementum nisi. Aenean aliquet nec mi et lacinia. Aliquam maximus iaculis mi
+								elit in scelerisque malesuada, tellus leo viverra massa, sed efficitur orci efficitur nec.</i> In consectetur, elit
+							in scelerisque malesuada, tellus leo viverra massa, nec malesuada turpis lectus ac urna. Suspendisse ut neque orci.
+							Phasellus tellus diam, pulvinar sit amet elit sit amet, fermentum viverra eros. Praesent neque purus, rhoncus nec
+							nibh non, mollis sodales odio.</p>
 					</div>
-
-					
-					<nav aria-label="Page navigation example">
-						<ul class="pagination mt-5">
-							<li class="page-item disabled">
-								<a class="page-link" href="#" tabindex="-1">Previous</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="#">1</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="#">2</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="#">3</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="#">Next</a>
-							</li>
-						</ul>
-
-					</nav>
-					<!-- //left side -->
+			
+					<hr>
+			
+				
+			
+					<!-- <div class="leave-coment-form">
+						<h3 class="blog-title text-dark mb-4">Leave a Reply</h3>
+						<form action="#" method="post">
+							<input type="text" name="Name" placeholder="Name" required="">
+							<input type="email" name="Email" placeholder="Email" required="">
+							<textarea name="Message" placeholder="Your comment here..." required=""></textarea>
+							<div class="mm_single_submit">
+								<input type="submit" value="Post Comment">
+							</div>
+						</form>
+					</div> -->
 				</div>
-
-
+				<!-- //left side -->
 				<!-- right side -->
 				<div class="col-lg-4 event-right mt-lg-0 mt-sm-5 mt-4">
 					<div class="event-right1">
-						<div class="search1 my-4">
+						<div class="search1">
 							<!-- <form class="form-inline" action="#" method="post"> -->
 							<form class="form-inline" action="#">
 								<input class="form-control rounded-0 mr-sm-2" type="search" placeholder="Search Here"
@@ -238,11 +230,11 @@
 							</form>
 						</div>
 						<div class="categories my-4 p-4 border">
-							<a href="project.html">	<h3 class="blog-title text-dark">科研成果</h3> </a>
+							<a href="news.html"> <h3 class="blog-title text-dark">团队新闻</h3></a>
 							<ul>
-								<li class="mt-3" th:each="pro:${project}">
-									<i class="fas fa-check mr-2"></i>
-									<a th:href="'/project/'+${pro.pid}" th:text="${#strings.abbreviate(pro.ptitle,19)}">一种深度聚类算法用于植物病害诊断识别</a>
+								<li class="mt-3" th:each="neww:${news}">
+									<!-- <i class="fas fa-angle-right" style="font-size: 20px;"></i>&nbsp; -->
+									<a th:href="'/news/'+${neww.nid}" style="font-size: 16px;" th:text=" '[' + ${#dates.format(neww.ndate,'MM-dd')} + '] ' + ${#strings.abbreviate(neww.ntitle,17)}">[12-15] 高欣教授为课题组做作线上报告</a>
 								</li>
 							</ul>
 						</div>
@@ -265,7 +257,7 @@
 											</li>
 											<li>
 												<i class="fa fa-user" aria-hidden="true"></i>
-												<a href="single.html" class="text-dark ml-2">Admin</a>
+												<a href="#" class="text-dark ml-2">Admin</a>
 											</li>
 										</ul>
 									</div>
@@ -324,7 +316,6 @@
 	<!-- //blog -->
 
 	<!-- footer top -->
-	<br><br><br>
 	<div class="middle-content py-5">
 		<div class="container py-xl-5 py-lg-3">
 			<div class="row">
@@ -409,6 +400,7 @@
 			</div>
 		</div>
 	</footer>
+	<!-- //footer -->
 
 
 	<!-- Js files -->
@@ -429,32 +421,6 @@
 	<!-- smooth scrolling -->
 	<script src="/static/front/js/SmoothScroll.min.js"></script>
 	<!-- //smooth scrolling -->
-
-	<!-- start-smoth-scrolling -->
-	<script src="/static/front/js/move-top.js"></script>
-	<script src="/static/front/js/easing.js"></script>
-	<script>
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
-				$('html,body').animate({
-					scrollTop: $(this.hash).offset().top
-				}, 1000);
-			});
-		});
-	</script>
-	<script>
-		function DateDiff(sDate1, sDate2) {  //sDate1和sDate2是yyyy-MM-dd格式
-			var aDate, oDate1, oDate2, iDays;
-			aDate = sDate1.split("-");
-			oDate1 = new Date(aDate[1] + '-' + aDate[2] + '-' + aDate[0]);  //转换为yyyy-MM-dd格式
-			aDate = sDate2.split("-");
-			oDate2 = new Date(aDate[1] + '-' + aDate[2] + '-' + aDate[0]);
-			iDays = parseInt(Math.abs(oDate1 - oDate2) / 1000 / 60 / 60 / 24); //把相差的毫秒数转换为天数
-			return iDays;  //返回相差天数
-		}
-	</script>
-	<!-- start-smoth-scrolling -->
 
 	<!-- move-top -->
 	<script src="/static/front/js/move-top.js"></script>

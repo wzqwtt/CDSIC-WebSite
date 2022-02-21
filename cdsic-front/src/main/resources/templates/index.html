@@ -281,7 +281,7 @@
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" th:each="pro:${project}">
-                            <a href="single.html">
+                            <a th:href="'/project/'+${pro.pid}">
                                 <div class="carousel-inner">
                                     <div th:attr="style='min-height:408px; background: url('+${pro.pimage}+') no-repeat center;background-size: cover;'"
                                          style="min-height: 408px; background: url(/static/front/images/news/Figure1.jpg) no-repeat center;background-size: cover;"></div>
