@@ -16,7 +16,7 @@ CDSIC-website
 
 ## 架构图
 
-![](https://gitee.com/wang-zongqin/CDSIC-WebSite/raw/master/img/SystemStruct.jpg)
+![](img/SystemStruct.jpg)
 
 
 ## 技术选型
