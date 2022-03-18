@@ -2,6 +2,9 @@
 
 CDSIC门户网站
 
+后端：https://github.com/ZongqinWang/CDSIC-WebSite
+前端：https://github.com/ZongqinWang/CDSIC-WebSite-VUE
+
 ## 组织结构
 
 ```
