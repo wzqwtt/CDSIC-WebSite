@@ -4,7 +4,7 @@ CDSIC门户网站
 
 ## 组织结构
 
-```aidl
+```
 CDSIC-website
 ├── cdsic-common -- 公共依赖，工具类及通用代码
 ├── cdsic-front -- cdsic宣传页
